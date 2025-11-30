@@ -1,0 +1,70 @@
+.nominations-wrapper {
+}
+
+.container {
+}
+
+.nominations {
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nominations-king {
+    display: flex;
+    margin: 0px 0px 60px 0px;
+}
+
+.nominations-card-king {
+    max-width: 600px;
+    padding: 0px 50px;
+    align-items: center;
+}
+
+.nominations-nomination {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.nominations-card {
+    padding: 0px 0px;
+    width: 400px;
+    align-items: center;
+    margin: 0px 0px 60px 0px;
+}
+
+.nominations-card_img img {
+    width: 100%;
+}
+
+.nominations-card_nomination {
+    padding: 10px 0px;
+    font-size: 60px;
+    color: #fff0e5;
+    text-align: center;
+}
+
+.nominations-card_name {
+    padding: 10px 0px;
+    font-size: 28px;
+    color: #808080;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+}
+
+.nominations-card_buttom {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 26px;
+    color: #fff0e5;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nominations-card_buttom:hover {
+    background-color: #808080;
+}

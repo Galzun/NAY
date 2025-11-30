@@ -1,0 +1,37 @@
+@import url("./nullStyle.css");
+
+/* сам скроллбар */
+::-webkit-scrollbar {
+    width: 3px; /* ширина вертикального */
+}
+
+/* дорожка */
+::-webkit-scrollbar-track {
+    background: #1a691962;
+    border-radius: 3px;
+}
+
+/* ползунок */
+::-webkit-scrollbar-thumb {
+    background: #1b6919;
+    border-radius: 3px;
+}
+
+/* при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #2aa728;
+}
+
+
+body {
+    background-color: #141419;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+.container {
+	margin: 0 auto;
+}

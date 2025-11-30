@@ -1,0 +1,48 @@
+.menu-wrapper {
+}
+.container {
+}
+.menu {
+    width: 100%;
+    text-decoration: none;
+    color: #1b6919;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    position: fixed;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1b6919;
+    font-size: 23px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: #2aa728;
+}
+
+.menu-block {
+    display: flex;
+    align-items: center;
+    width: 440px;
+    justify-content: space-between;
+}
+
+.menu-block_social {
+    display: flex;
+    align-items: center;
+    width: 205px;
+    justify-content: space-between;
+}
+
+.menu-block_social a svg{
+    fill: #1b6919;
+    transition: 0.2s;
+}
+
+.menu-block_social a svg:hover{
+    fill: #2aa728;
+}
