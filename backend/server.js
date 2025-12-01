@@ -16,4 +16,6 @@ await connectDB(); // Node 24 supports top-level await in ESM
 app.use("/vote", voteRoutes);
 app.use("/auth", authRoutes);
 
-app.listen(5000, () => console.log("🚀 Сервер запущен на порту 5000"));
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`🚀 Сервер запущен на порту ${PORT}`);
+});
