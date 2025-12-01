@@ -7,6 +7,7 @@ import voteRoutes from "./routes/vote.js";
 import authRoutes from "./routes/auth.js";
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
