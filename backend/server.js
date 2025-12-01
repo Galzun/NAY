@@ -2,7 +2,7 @@
 
 import express from "express";
 import cors from "cors";
-import connectDB from "./db.js";
+// import connectDB from "./db.js";
 import voteRoutes from "./routes/vote.js";
 import authRoutes from "./routes/auth.js";
 

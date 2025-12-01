@@ -1,28 +1,47 @@
 // routes/auth.js
 import { Router } from "express";
-import bcrypt from "bcryptjs";
+// import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import User from "../models/User.js";
+// import User from "../models/User.js";
 
 const router = Router();
 const JWT_SECRET = process.env.JWT_SECRET || "secretkey";
 
-// Регистрация
+// ВРЕМЕННАЯ заглушка регистрации БЕЗ Mongo
 router.post("/register", async (req, res) => {
     try {
         const { username, password } = req.body;
-        const exists = await User.findOne({ username });
-        if (exists) return res.status(400).json({ message: "Пользователь уже существует" });
 
-        const hashedPassword = await bcrypt.hash(password, 10);
-        await new User({ username, password: hashedPassword }).save();
+        if (!username || !password) {
+        return res.status(400).json({ message: "Логин и пароль обязательны" });
+        }
 
-        res.json({ message: "Регистрация успешна" });
+        console.log("REGISTER STUB:", { username });
+
+        // Никаких User.findOne / save — просто успешный ответ
+        return res.json({ message: "Регистрация (заглушка)", username });
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: "Ошибка регистрации" });
+        console.error("REGISTER ERROR:", err);
+        return res.status(500).json({ message: "Ошибка регистрации (заглушка)" });
     }
 });
+
+// Регистрация
+// router.post("/register", async (req, res) => {
+//     try {
+//         const { username, password } = req.body;
+//         const exists = await User.findOne({ username });
+//         if (exists) return res.status(400).json({ message: "Пользователь уже существует" });
+
+//         const hashedPassword = await bcrypt.hash(password, 10);
+//         await new User({ username, password: hashedPassword }).save();
+
+//         res.json({ message: "Регистрация успешна" });
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).json({ message: "Ошибка регистрации" });
+//     }
+// });
 
 // Вход
 router.post("/login", async (req, res) => {
