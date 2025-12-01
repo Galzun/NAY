@@ -17,7 +17,7 @@ app.use(cors());
 // app.use(cors({origin: allowedOrigins,}));
 app.use(express.json());
 
-await connectDB(); // Node 24 supports top-level await in ESM
+// await connectDB();
 
 app.use("/vote", voteRoutes);
 app.use("/auth", authRoutes);
