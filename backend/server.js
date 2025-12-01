@@ -8,8 +8,12 @@ import authRoutes from "./routes/auth.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://galzun-nay-9d8c.twc1.net" // домен фронта из Apps https://galzun-nay-c390.twc1.net
+];
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({origin: allowedOrigins,}));
 app.use(express.json());
 
 await connectDB(); // Node 24 supports top-level await in ESM

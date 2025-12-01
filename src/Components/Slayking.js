@@ -9,7 +9,7 @@ export default function Slayking({visible, setVisible}) {
 
     const confirmVote = async () => {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:5000/vote", {
+        const res = await fetch("https://galzun-nay-c390.twc1.net", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

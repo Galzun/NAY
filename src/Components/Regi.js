@@ -6,7 +6,7 @@ function Auth() {
     const [password, setPassword] = useState("");
 
     const register = async () => {
-        const res = await fetch("http://localhost:5000/auth/register", {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -15,7 +15,7 @@ function Auth() {
     };
 
     const login = async () => {
-        const res = await fetch("http://localhost:5000/auth/login", {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
