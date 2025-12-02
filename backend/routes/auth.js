@@ -2,10 +2,48 @@
 import { Router } from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import crypto from "crypto";
 import User from "../models/User.js";
 
 const router = Router();
 const JWT_SECRET = process.env.JWT_SECRET || "secretkey";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+
+// Проверка подписи от Telegram
+function checkTelegramAuth(data) {
+    const { hash, ...rest } = data;
+    const secret = crypto.createHash("sha256").update(TELEGRAM_BOT_TOKEN).digest();
+    const checkString = Object.keys(rest)
+        .sort()
+        .map(key => `${key}=${rest[key]}`)
+        .join("\n");
+    const hmac = crypto.createHmac("sha256", secret).update(checkString).digest("hex");
+    return hmac === hash;
+}
+
+// Авторизация через Telegram
+router.post("/telegram", async (req, res) => {
+    try {
+        const data = req.body; // данные от Telegram Login Widget
+        if (!checkTelegramAuth(data)) {
+            return res.status(400).json({ message: "Неверная подпись Telegram" });
+        }
+
+        let user = await User.findOne({ telegramId: data.id });
+        if (!user) {
+            user = await new User({
+                telegramId: data.id,
+                username: data.username || `tg_${data.id}`
+            }).save();
+        }
+
+        const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
+        res.json({ token, user });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Ошибка Telegram авторизации" });
+    }
+});
 
 // Регистрация
 router.post("/register", async (req, res) => {
