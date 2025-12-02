@@ -2,6 +2,7 @@ import Menu from "./Components/Menu.js"
 import Nominations from "./Components/Nominations.js"
 import Slayking from "./Components/Slayking.js"
 import Reg from "./Components/Regi.js"
+import Telegram from "./Components/Telegram.js"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useState } from "react";
 import { useEffect } from "react";
@@ -26,6 +27,7 @@ export default function App() {
 				<Slayking visible={visible} setVisible={setVisible}/>
 				<Nominations setVisible={setVisible}/>
 				<Reg/>
+				<Telegram/>
 			</div>
 		</Router>
 	);
