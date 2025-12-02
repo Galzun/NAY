@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import User from "./models/User.js";
 import Vote from "./models/Vote.js";
 
-const MONGO_URI = "mongodb://localhost:27017/votesdb";
+const MONGO_URI = "mongodb://gen_user:qwerty12345@5.129.198.209:27017/default_db?authSource=admin";
 
 const clearDB = async () => {
     try {
