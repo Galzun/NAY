@@ -36,7 +36,7 @@ router.post("/telegram", async (req, res) => {
             }).save();
         }
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
-        res.json({ token, user });
+        res.json({ token, user: "Вхоод успешен" });
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: "Ошибка Telegram авторизации" });
