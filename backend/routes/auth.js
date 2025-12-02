@@ -28,7 +28,6 @@ router.post("/telegram", async (req, res) => {
         if (!checkTelegramAuth(data)) {
             return res.status(400).json({ message: "Неверная подпись Telegram" });
         }
-
         let user = await User.findOne({ telegramId: data.id });
         if (!user) {
             user = await new User({
@@ -36,7 +35,6 @@ router.post("/telegram", async (req, res) => {
                 username: data.username || `tg_${data.id}`
             }).save();
         }
-
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
         res.json({ token, user });
     } catch (err) {
@@ -48,16 +46,26 @@ router.post("/telegram", async (req, res) => {
 // Регистрация
 router.post("/register", async (req, res) => {
     try {
-        const { username, password } = req.body;
+        let { username, password } = req.body;
+        // Нормализуем имя (убираем пробелы и приводим к нижнему регистру)
+        username = username.trim().toLowerCase();
+        // Проверяем существование
         const exists = await User.findOne({ username });
-        if (exists) return res.status(400).json({ message: "Пользователь уже существует" });
-
+        if (exists) {
+            return res.status(400).json({ message: "Пользователь уже существует" });
+        }
+        // Хэшируем пароль
         const hashedPassword = await bcrypt.hash(password, 10);
-        await new User({ username, password: hashedPassword }).save();
-
+        // Сохраняем пользователя
+        const user = new User({ username, password: hashedPassword });
+        await user.save();
         res.json({ message: "Регистрация успешна" });
     } catch (err) {
-        console.error(err);
+        console.error("Ошибка регистрации:", err);
+        // Ловим ошибку уникального индекса MongoDB
+        if (err.code === 11000) {
+            return res.status(400).json({ message: "Пользователь уже существует" });
+        }
         res.status(500).json({ message: "Ошибка регистрации" });
     }
 });
@@ -65,19 +73,25 @@ router.post("/register", async (req, res) => {
 // Вход
 router.post("/login", async (req, res) => {
     try {
-        const { username, password } = req.body;
+        let { username, password } = req.body;
+        // Нормализуем имя (убираем пробелы и приводим к нижнему регистру)
+        username = username.trim().toLowerCase();
+        // Ищем пользователя
         const user = await User.findOne({ username });
-        if (!user) return res.status(400).json({ message: "Пользователь не найден" });
-
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) return res.status(400).json({ message: "Неверный пароль" });
-
+        if (!user) {
+            return res.status(400).json({ message: "Пользователь не найден" });
+        }
+        // Проверяем пароль
+        const isMatch = await bcrypt.compare(password, user.password || "");
+        if (!isMatch) {
+            return res.status(400).json({ message: "Неверный пароль" });
+        }
+        // Генерируем JWT
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
-        res.json({ token });
+        res.json({ token, message: "Вход успешен" });
     } catch (err) {
-        console.error(err);
+        console.error("Ошибка входа:", err);
         res.status(500).json({ message: "Ошибка входа" });
     }
 });
-
 export default router;
