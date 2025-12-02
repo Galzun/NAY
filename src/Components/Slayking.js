@@ -1,3 +1,5 @@
+// Slayking.js
+
 import "./Style/Slayking.css"
 import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
@@ -9,7 +11,7 @@ export default function Slayking({visible, setVisible}) {
 
     const confirmVote = async () => {
         const token = localStorage.getItem("token");
-        const res = await fetch("https://galzun-nay-c390.twc1.net", {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

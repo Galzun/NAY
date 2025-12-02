@@ -8,6 +8,7 @@ import authRoutes from "./routes/auth.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
 const allowedOrigins = [
     "http://localhost:3000",
     "https://galzun-nay-9d8c.twc1.net" // домен фронта из Apps
