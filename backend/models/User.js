@@ -2,10 +2,11 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-    username: { type: String, required: false, unique: true },
-    password: { type: String }, // пароль может быть пустым для Telegram
-    telegramId: { type: String, unique: true }, // новый идентификатор
+    username: { type: String, required: true, unique: true },
+    password: { type: String },
+    telegramId: { type: String, unique: true, sparse: true },
     votes: { type: Map, of: Boolean, default: {} }
 });
+
 
 export default mongoose.model("User", UserSchema);
