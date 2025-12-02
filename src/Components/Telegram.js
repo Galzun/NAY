@@ -20,20 +20,23 @@ function Telegram() {
         containerRef.current.appendChild(script);
     }
 
-        window.TelegramLoginWidget = {
-        dataOnauth: async (user) => {
-            const res = await fetch("https://galzun-nay-c390.twc1.net/auth/telegram", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(user),
-            });
-            const data = await res.json();
-            localStorage.setItem("token", data.token);
-        },
-        };
+window.TelegramLoginWidget = {
+    dataOnauth: async (user) => {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/auth/telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user),
+        });
+        const data = await res.json();
+        console.log("Ответ сервера:", data);
+        localStorage.setItem("token", data.token); // теперь точно будет токен
+    }
+};
+
+
     }, []);
 
-  return <div ref={containerRef}></div>; // теперь виджет появится внутри этого div
+    return <div ref={containerRef}></div>; // теперь виджет появится внутри этого div
 }
 
 export default Telegram;

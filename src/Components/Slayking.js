@@ -15,7 +15,7 @@ export default function Slayking({visible, setVisible}) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({ category: "SlayKing", streamer: selectedStreamer }),
         });

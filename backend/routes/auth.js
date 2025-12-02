@@ -24,21 +24,30 @@ function checkTelegramAuth(data) {
 // Авторизация через Telegram
 router.post("/telegram", async (req, res) => {
     try {
-        const data = req.body; // данные от Telegram Login Widget
+        const data = req.body;
+        // Проверка подписи от Telegram
         if (!checkTelegramAuth(data)) {
             return res.status(400).json({ message: "Неверная подпись Telegram" });
         }
+        // Ищем пользователя по telegramId
         let user = await User.findOne({ telegramId: data.id });
         if (!user) {
-            user = await new User({
+            user = new User({
                 telegramId: data.id,
                 username: data.username || `tg_${data.id}`
-            }).save();
+            });
+            await user.save();
         }
+        // Генерируем JWT
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "1h" });
-        res.json({ token, user: "Вхоод успешен" });
+        // Возвращаем токен и данные пользователя
+        res.json({ token, message: "Вход через Telegram успешен", user });
+        localStorage.getItem("token")
     } catch (err) {
-        console.error(err);
+        console.error("Ошибка Telegram авторизации:", err);
+        if (err.code === 11000) {
+            return res.status(400).json({ message: "Пользователь уже существует" });
+        }
         res.status(500).json({ message: "Ошибка Telegram авторизации" });
     }
 });
