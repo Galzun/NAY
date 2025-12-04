@@ -5,8 +5,7 @@ import Slayquin from "./Components/Slayquin.js"
 import Reg from "./Components/Regi.js"
 import Telegram from "./Components/Telegram.js"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
 
@@ -21,7 +20,7 @@ export default function App() {
 		}
 	}, [visibleKing, visibleQuin]);
 
-		const [myVotes, setMyVotes] = useState({});
+	const [myVotes, setMyVotes] = useState({});
 
 	const fetchMyVotes = async () => {
 		const res = await fetch("https://galzun-nay-c390.twc1.net/vote/my", {
@@ -49,9 +48,9 @@ export default function App() {
 		<Router>
 			<div>
 				<Menu/>
-				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing}/>
-				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin}/>
-				<Nominations setvisibleKing={setvisibleKing} setvisibleQuin={setvisibleQuin}/>
+				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing} onVote={fetchMyVotes}/>
+				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin} onVote={fetchMyVotes}/>
+				<Nominations setvisibleKing={setvisibleKing} setvisibleQuin={setvisibleQuin} myVotes={myVotes} setMyVotes={setMyVotes}/>
 				<Reg/>
 				<Telegram/>
 			</div>
