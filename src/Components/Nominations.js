@@ -1,7 +1,7 @@
 // Nominations.js
 
 import "./Style/Nominations.css"
-import streamerImages from "./Static/streamerImages.js"
+import streamerImages from "./Static/streamerImages"
 import { useState, useEffect } from "react";
 
 export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, setMyVotes}) {
@@ -16,12 +16,9 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
         const data = await res.json();
         // Преобразуем массив в объект { category: streamer }
         const votesMap = {};
-        data.forEach(v => {
-            votesMap[v.category] = {
-            name: v.streamer_name,
-            image: v.streamer_image
-        };
-        });
+            data.forEach(v => {
+            votesMap[v.category] = v.streamer_name; // только имя
+            });
         setMyVotes(votesMap);
         };
         fetchVotes();
@@ -34,13 +31,13 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                             <div className="nominations-king">
                                 <ul className="nominations-card-king">
                                 <li className="nominations-card_img">
-                                    <img src={myVotes?.SlayKing?.image || streamerImages["5opka"]} alt="avatar"/>
+                                    <img src={myVotes?.SlayKing || streamerImages["5opka"]} alt="avatar"/>
                                 </li>
                                 <li className="nominations-card_nomination">
                                     SlayKing
                                 </li>
                                 <li className="nominations-card_name">
-                                    {myVotes?.SlayKing?.name || "—"}
+                                    {myVotes?.SlayKing || "—"}
                                 </li>
                                 <li
                                     onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
@@ -49,7 +46,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                 </ul>
                                 <ul className="nominations-card-king">
                                     <li className="nominations-card_img">
-                                        <img src={streamerImages["5opka"]} alt="avatar"/>
+                                        <img src={myVotes?.SlayQuin || streamerImages["5opka"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayQuin

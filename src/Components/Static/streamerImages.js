@@ -1,7 +1,11 @@
-// All.js
+import Popka from "./avatar/50pka.webp";
+import Cs from "./avatar/counter-strike.webp";
+import Sasavot from "./avatar/Gleb.jpg"
+
 const streamerImages = {
-    "5opka": "./public/avatar/50pka.webp",
-    "Cs": "./public/avatar/counter-strike.webp",
+    "5opka": Popka,
+    "Cs": Cs,
+    "Sasavot": Sasavot,
 };
 
 export default streamerImages;
