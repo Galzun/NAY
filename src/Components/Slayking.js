@@ -43,9 +43,9 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
                             </p>
                             <div
-                                className="slayking__body-card__button"
-                                onClick={confirmVote} disabled={!selectedStreamer}>
-                                Подтвердить
+                            className="slayking__body-card__button"
+                            onClick={() => confirmVote(selectedStreamer)} disabled={!selectedStreamer}>
+                            Подтвердить
                             </div>
                             <div className="slayking__header-img">
                                 <img src={Cs}></img>
