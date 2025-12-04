@@ -1,8 +1,7 @@
 // Slayking.js
 
 import "./Style/Slayking.css"
-import Popka from "./Static/avatar/50pka.webp";
-import Cs from "./Static/avatar/counter-strike.webp";
+import streamerImages from "./Static/streamerImages.js"
 import { useState } from "react";
 
 export default function Slayking({visibleKing, setvisibleKing, onVote}) {

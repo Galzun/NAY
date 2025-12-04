@@ -1,8 +1,7 @@
 // Nominations.js
 
 import "./Style/Nominations.css"
-import Popka from "./Static/avatar/50pka.webp";
-import Cs from "./Static/avatar/counter-strike.webp";
+import streamerImages from "./Static/streamerImages.js"
 import { useState, useEffect } from "react";
 
 export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, setMyVotes}) {
@@ -18,7 +17,10 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
         // Преобразуем массив в объект { category: streamer }
         const votesMap = {};
         data.forEach(v => {
-            votesMap[v.category] = v.streamer_name;
+            votesMap[v.category] = {
+            name: v.streamer_name,
+            image: v.streamer_image
+        };
         });
         setMyVotes(votesMap);
         };

@@ -3,6 +3,7 @@ import { Router } from "express";
 import jwt from "jsonwebtoken";
 import Vote from "../models/Vote.js";
 import User from "../models/User.js";
+import streamerImages from "../../src/Components/Static/streamerImages.js"
 
 const router = Router();
 const JWT_SECRET = process.env.JWT_SECRET || "secretkey";
@@ -108,7 +109,11 @@ router.get("/stats", async (req, res) => {
 router.get("/my", auth, async (req, res) => {
     try {
         const votes = await Vote.find({ userId: req.userId });
-        res.json(votes);
+        res.json(votes.map(v => ({
+            category: v.category,
+            streamer_name: v.streamer_name,
+            streamer_image: streamerImages[v.streamer_name] || null
+            })));
     } catch (err) {
         console.error("Ошибка при получении голосов:", err);
         res.status(500).json({ message: "Ошибка сервера" });
