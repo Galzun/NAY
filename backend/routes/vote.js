@@ -50,39 +50,60 @@ router.post("/", auth, async (req, res) => {
 // Статистика голосов + список пользователей
 router.get("/stats", async (req, res) => {
     try {
-        // Считаем голоса
         const stats = await Vote.aggregate([
-        { $group: { _id: { category: "$category", streamer: "$streamer_name" }, total: { $sum: 1 } } },
-        { $group: { _id: "$_id.category", votes: { $push: { streamer: "$_id.streamer", total: "$total" } } } },
-        { $project: { category: "$_id", votes: 1, _id: 0 } }
+            {
+                $lookup: {
+                    from: "users", // имя коллекции User в MongoDB
+                    localField: "userId",
+                    foreignField: "_id",
+                    as: "user"
+                }
+            },
+            { $unwind: "$user" },
+            {
+                $group: {
+                    _id: { category: "$category", streamer: "$streamer_name" },
+                    total: { $sum: 1 },
+                    users: { $push: "$user.username" } // собираем никнеймы
+                }
+            },
+            {
+                $group: {
+                    _id: "$_id.category",
+                    votes: {
+                        $push: {
+                            streamer: "$_id.streamer",
+                            total: "$total",
+                            users: "$users"
+                        }
+                    }
+                }
+            },
+            { $project: { category: "$_id", votes: 1, _id: 0 } }
         ]);
 
-        // Получаем пользователей
         const users = await User.find({}, { password: 0 });
 
-        // Форматируем вывод
         let output = "=== 📊 Статистика голосов ===\n";
         stats.forEach(cat => {
-        output += `\nКатегория: ${cat.category || "Без категории"}\n`;
-        cat.votes.forEach(v => {
-            output += `${v.streamer} - ${v.total}\n`;
-        });
+            output += `\nКатегория: ${cat.category || "Без категории"}\n`;
+            cat.votes.forEach(v => {
+                output += `${v.streamer} - ${v.total} (голосовали: ${v.users.join(", ")})\n`;
+            });
         });
 
         output += "\n=== 👥 Зарегистрированные пользователи ===\n";
         users.forEach(u => {
-        output += `- ${u.username}\n`;
+            output += `- ${u.username}\n`;
         });
 
-        // Выводим в консоль для админа
         console.log(output);
-
-        // Отправляем как текстовый ответ
         res.type("text/plain").send(output);
     } catch (err) {
         console.error("Ошибка при получении статистики:", err);
         res.status(500).json({ message: "Ошибка сервера" });
     }
 });
+
 
 export default router;
