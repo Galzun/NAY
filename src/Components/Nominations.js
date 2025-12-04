@@ -30,23 +30,23 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                         <div className='nominations'>
                             <div className="nominations-king">
                                 <ul className="nominations-card-king">
-                                <li className="nominations-card_img">
-                                    <img src={myVotes?.SlayKing || streamerImages["5opka"]} alt="avatar"/>
-                                </li>
-                                <li className="nominations-card_nomination">
-                                    SlayKing
-                                </li>
-                                <li className="nominations-card_name">
-                                    {myVotes?.SlayKing || "—"}
-                                </li>
-                                <li
-                                    onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
-                                    Сделать выбор
-                                </li>
+                                    <li className="nominations-card_img">
+                                        <img src={streamerImages[myVotes?.SlayKing] || streamerImages["5opka"]} alt="avatar"/>
+                                    </li>
+                                    <li className="nominations-card_nomination">
+                                        SlayKing
+                                    </li>
+                                    <li className="nominations-card_name">
+                                        {myVotes?.SlayKing || "—"}
+                                    </li>
+                                    <li
+                                        onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
+                                        Сделать выбор
+                                    </li>
                                 </ul>
                                 <ul className="nominations-card-king">
                                     <li className="nominations-card_img">
-                                        <img src={myVotes?.SlayQuin || streamerImages["5opka"]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.SlayQuin] || streamerImages["5opka"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayQuin
