@@ -7,8 +7,6 @@ import { useState, useEffect } from "react";
 
 export default function Nominations({setvisibleKing, setvisibleQuin, myVotes}) {
 
-    const [myVotes, setMyVotes] = useState({});
-
     useEffect(() => {
         const fetchVotes = async () => {
         const res = await fetch("https://galzun-nay-c390.twc1.net/vote/my", {
