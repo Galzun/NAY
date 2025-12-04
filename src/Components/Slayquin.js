@@ -5,7 +5,7 @@ import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
 import { useState } from "react";
 
-export default function Slayking({visible, setVisible}) {
+export default function Slayking({visibleQuin, setvisibleQuin}) {
     
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
@@ -26,12 +26,12 @@ export default function Slayking({visible, setVisible}) {
 
     return (
         <div>
-            {visible &&
+            {visibleQuin &&
             <div className='slayking-wrapper'>
                 <div className='container'>
                     <div className='slayking'>
                         <div className="slayking__close">
-                            <span onClick={() => setVisible(false)} ></span>
+                            <span onClick={() => setvisibleQuin(false)} ></span>
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">

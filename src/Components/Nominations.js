@@ -4,7 +4,7 @@ import "./Style/Nominations.css"
 import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
 
-export default function Nominations({setVisible}) {
+export default function Nominations({setvisibleKing, setvisibleQuin}) {
 
     return (
                 <div className='nominations-wrapper'>
@@ -21,7 +21,7 @@ export default function Nominations({setVisible}) {
                                     <li className="nominations-card_name">
                                         5opka
                                     </li>
-                                    <li onClick={() => setVisible(true)} className="nominations-card_buttom">
+                                    <li onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                 </ul>
@@ -35,7 +35,7 @@ export default function Nominations({setVisible}) {
                                     <li className="nominations-card_name">
                                         Лиза
                                     </li>
-                                    <li className="nominations-card_buttom">
+                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                 </ul>

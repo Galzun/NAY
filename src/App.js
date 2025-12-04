@@ -10,24 +10,25 @@ import { useEffect } from "react";
 
 export default function App() {
 
-	const [visible, setVisible] = useState(false);
+	const [visibleKing, setvisibleKing] = useState(false);
+	const [visibleQuin, setvisibleQuin] = useState(false);
 
 	useEffect(() => {
-	if (visible) {
-    document.body.classList.add("modal-open");
-	} else {
-    document.body.classList.remove("modal-open");
-	}
-}, [visible]);
+		if (visibleKing || visibleQuin) {
+		document.body.classList.add("modal-open");
+		} else {
+		document.body.classList.remove("modal-open");
+		}
+	}, [visibleKing, visibleQuin]);
 
 
 	return (
 		<Router>
 			<div>
 				<Menu/>
-				<Slayking visible={visible} setVisible={setVisible}/>
-				<Slayquin visible={visible} setVisible={setVisible}/>
-				<Nominations setVisible={setVisible}/>
+				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing}/>
+				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin}/>
+				<Nominations setvisibleKing={setvisibleKing}/>
 				<Reg/>
 				<Telegram/>
 			</div>
