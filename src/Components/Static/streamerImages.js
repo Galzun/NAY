@@ -1,5 +1,7 @@
 // All.js
 const streamerImages = {
-    "Popka": "/avatar/50pka.webp",
+    "5opka": "/avatar/50pka.webp",
     "Cs": "/avatar/counter-strike.webp",
 };
+
+export default streamerImages;
