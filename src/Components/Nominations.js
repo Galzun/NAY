@@ -1,3 +1,5 @@
+// Nominations.js
+
 import "./Style/Nominations.css"
 import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
@@ -28,10 +30,10 @@ export default function Nominations({setVisible}) {
                                         <img src={Popka} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
-                                        SlayKing
+                                        SlayQuin
                                     </li>
                                     <li className="nominations-card_name">
-                                        5opka
+                                        Лиза
                                     </li>
                                     <li className="nominations-card_buttom">
                                         Сделать выбор
