@@ -20,6 +20,14 @@ function Telegram({onLogin}) {
             if (data.token) {
                 localStorage.setItem("token", data.token);
                 onLogin(); // обновляем голоса сразу после входа
+                window.TelegramLoginWidget = {
+                dataOnauth: async (user) => {
+                    console.log("Данные от Telegram:", user);
+                    if (user.photo_url) {
+                    document.getElementById("tgAvatar").src = user.photo_url;
+                    }
+                }
+                };
             }
             } catch (err) {
             console.error("Ошибка запроса:", err);

@@ -49,7 +49,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                         <img src={Popka} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
-                                        SlayQing
+                                        SlayQuin
                                     </li>
                                     <li className="nominations-card_name">
                                         {myVotes["SlayQuin"] || "—"} {/* показываем стримера из бэкенда */}

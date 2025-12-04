@@ -25,6 +25,9 @@ export default function Menu() {
                         </a>
                         <a rel="noopener noreferrer" target="_blank" href="https://t.me/jabalaku"><VkIcon width={38} height={38} /></a>
                         <a rel="noopener noreferrer" target="_blank" href="https://t.me/jabalaku"><TelegramIcon width={38} height={38} /></a>
+                        <div className="menu-block_social-avatar">
+                            <img id="tgAvatar" alt="Аватар пользователя"></img>
+                        </div>
 					</ul>
 				</div>
 			</div>
