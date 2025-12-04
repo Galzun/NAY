@@ -3,6 +3,7 @@
 import "./Style/Nominations.css"
 import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
+import { useState, useEffect } from "react";
 
 export default function Nominations({setvisibleKing, setvisibleQuin}) {
 
