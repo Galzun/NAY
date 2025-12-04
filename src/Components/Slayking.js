@@ -67,10 +67,10 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={Cs}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    5opka
+                                    Sasavot
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"

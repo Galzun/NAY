@@ -31,18 +31,19 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                         <div className='nominations'>
                             <div className="nominations-king">
                                 <ul className="nominations-card-king">
-                                    <li className="nominations-card_img">
-                                        <img src={Popka} alt="avatar"/>
-                                    </li>
-                                    <li className="nominations-card_nomination">
-                                        SlayKing
-                                    </li>
-                                    <li className="nominations-card_name">
-                                        {myVotes["SlayKing"] || "—"} {/* показываем стримера из бэкенда */}
-                                    </li>
-                                    <li onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
-                                        Сделать выбор
-                                    </li>
+                                <li className="nominations-card_img">
+                                    <img src={myVotes?.SlayKing?.image || Popka} alt="avatar"/>
+                                </li>
+                                <li className="nominations-card_nomination">
+                                    SlayKing
+                                </li>
+                                <li className="nominations-card_name">
+                                    {myVotes?.SlayKing?.name || "—"}
+                                </li>
+                                <li
+                                    onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
+                                    Сделать выбор
+                                </li>
                                 </ul>
                                 <ul className="nominations-card-king">
                                     <li className="nominations-card_img">
