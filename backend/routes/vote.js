@@ -105,5 +105,14 @@ router.get("/stats", async (req, res) => {
     }
 });
 
+router.get("/myvote", auth, async (req, res) => {
+    try {
+        const votes = await Vote.find({ userId: req.userId });
+        res.json(votes); // [{category:"SlayKing", streamer_name:"5opka"}, ...]
+    } catch (err) {
+        res.status(500).json({ message: "Ошибка сервера" });
+    }
+});
+
 
 export default router;

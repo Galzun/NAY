@@ -6,6 +6,23 @@ import Cs from "./Static/avatar/counter-strike.webp";
 
 export default function Nominations({setvisibleKing, setvisibleQuin}) {
 
+    const [myVotes, setMyVotes] = useState({});
+
+    useEffect(() => {
+        axios.get("/api/vote/myvote", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+        })
+        .then(res => {
+        // Преобразуем массив в объект { SlayKing: "5opka", SlayQuin: "Лиза" }
+        const votesMap = {};
+        res.data.forEach(v => {
+            votesMap[v.category] = v.streamer_name;
+        });
+        setMyVotes(votesMap);
+        })
+        .catch(err => console.error(err));
+    }, []);
+
     return (
                 <div className='nominations-wrapper'>
                     <div className='container'>
@@ -19,7 +36,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin}) {
                                         SlayKing
                                     </li>
                                     <li className="nominations-card_name">
-                                        5opka
+                                        {myVotes["SlayKing"] || "—"} {/* если голос есть, показываем ник */}
                                     </li>
                                     <li onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
                                         Сделать выбор

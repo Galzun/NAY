@@ -23,6 +23,22 @@ export default function Slayking({visibleKing, setvisibleKing}) {
         console.log("Ответ сервера:", data);
     };
 
+        const [myVotes, setMyVotes] = useState({});
+
+    useEffect(() => {
+        axios.get("/api/vote/myvote", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+        })
+        .then(res => {
+        // Преобразуем массив в объект { SlayKing: "5opka", SlayQuin: "Лиза" }
+        const votesMap = {};
+        res.data.forEach(v => {
+            votesMap[v.category] = v.streamer_name;
+        });
+        setMyVotes(votesMap);
+        })
+        .catch(err => console.error(err));
+    }, []);
 
     return (
         <div>
