@@ -5,22 +5,24 @@ import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
 import { useState } from "react";
 
-export default function Slayking({visibleKing, setvisibleKing}) {
+export default function Slayking({visibleKing, setvisibleKing, onVote}) {
     
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
-    const confirmVote = async () => {
-        const token = localStorage.getItem("token");
+    const confirmVote = async (streamer) => {
         const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "SlayKing", streamer: selectedStreamer }),
+        body: JSON.stringify({ category: "SlayKing", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
+
+        // после голосования обновляем список голосов
+        onVote();
     };
 
 

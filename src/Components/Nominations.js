@@ -5,7 +5,7 @@ import Popka from "./Static/avatar/50pka.webp";
 import Cs from "./Static/avatar/counter-strike.webp";
 import { useState, useEffect } from "react";
 
-export default function Nominations({setvisibleKing, setvisibleQuin}) {
+export default function Nominations({setvisibleKing, setvisibleQuin, myVotes}) {
 
     const [myVotes, setMyVotes] = useState({});
 
@@ -50,11 +50,8 @@ export default function Nominations({setvisibleKing, setvisibleQuin}) {
                                     <li className="nominations-card_img">
                                         <img src={Popka} alt="avatar"/>
                                     </li>
-                                    <li className="nominations-card_nomination">
-                                        SlayQuin
-                                    </li>
                                     <li className="nominations-card_name">
-                                        Лиза
+                                        {myVotes["SlayQuin"] || "—"} {/* показываем стримера из бэкенда */}
                                     </li>
                                     <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
                                         Сделать выбор
