@@ -47,13 +47,13 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             Подтвердить
                             </div>
                             <div className="slayking__header-img">
-                                <img src={Cs}></img>
+                                <img src={streamerImages["Cs"]}></img>
                             </div>
                         </div>
                         <div className="slayking__body">
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
@@ -66,7 +66,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Cs}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     Sasavot
@@ -79,7 +79,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
@@ -90,7 +90,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
@@ -101,7 +101,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
@@ -112,7 +112,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
@@ -123,7 +123,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
@@ -134,7 +134,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={Popka}></img>
+                                    <img src={streamerImages["5opka"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka

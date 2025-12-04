@@ -34,7 +34,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                             <div className="nominations-king">
                                 <ul className="nominations-card-king">
                                 <li className="nominations-card_img">
-                                    <img src={myVotes?.SlayKing?.image || Popka} alt="avatar"/>
+                                    <img src={myVotes?.SlayKing?.image || streamerImages["Popka"]} alt="avatar"/>
                                 </li>
                                 <li className="nominations-card_nomination">
                                     SlayKing
@@ -49,7 +49,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                 </ul>
                                 <ul className="nominations-card-king">
                                     <li className="nominations-card_img">
-                                        <img src={Popka} alt="avatar"/>
+                                        <img src={streamerImages["Popka"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayQuin
@@ -65,7 +65,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                             <div className="nominations-nomination">
                                 <ul className="nominations-card">
                                     <li className="nominations-card_img">
-                                        <img src={Cs} alt="avatar"/>
+                                        <img src={streamerImages["Cs"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayKing
@@ -79,7 +79,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card_img">
-                                        <img src={Cs} alt="avatar"/>
+                                        <img src={streamerImages["Cs"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayKing
@@ -93,21 +93,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card_img">
-                                        <img src={Cs} alt="avatar"/>
-                                    </li>
-                                    <li className="nominations-card_nomination">
-                                        SlayKing
-                                    </li>
-                                    <li className="nominations-card_name">
-                                        5opka
-                                    </li>
-                                    <li className="nominations-card_buttom">
-                                        Сделать выбор
-                                    </li>
-                                </ul>
-                                                                <ul className="nominations-card">
-                                    <li className="nominations-card_img">
-                                        <img src={Popka} alt="avatar"/>
+                                        <img src={streamerImages["Cs"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayKing
@@ -121,7 +107,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card_img">
-                                        <img src={Popka} alt="avatar"/>
+                                        <img src={streamerImages["Cs"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayKing
@@ -135,7 +121,21 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card_img">
-                                        <img src={Popka} alt="avatar"/>
+                                        <img src={streamerImages["Cs"]} alt="avatar"/>
+                                    </li>
+                                    <li className="nominations-card_nomination">
+                                        SlayKing
+                                    </li>
+                                    <li className="nominations-card_name">
+                                        5opka
+                                    </li>
+                                    <li className="nominations-card_buttom">
+                                        Сделать выбор
+                                    </li>
+                                </ul>
+                                <ul className="nominations-card">
+                                    <li className="nominations-card_img">
+                                        <img src={streamerImages["Cs"]} alt="avatar"/>
                                     </li>
                                     <li className="nominations-card_nomination">
                                         SlayKing
