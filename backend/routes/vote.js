@@ -88,7 +88,7 @@ router.get("/stats", async (req, res) => {
         stats.forEach(cat => {
             output += `\nКатегория: ${cat.category || "Без категории"}\n`;
             cat.votes.forEach(v => {
-                output += `${v.streamer} - ${v.total} (голосовали: ${v.users.join(", ")})\n`;
+                output += `${v.streamer} - ${v.total} (${v.users.join(" | ")})\n`;
             });
         });
 
