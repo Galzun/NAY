@@ -1,13 +1,20 @@
 import { useEffect, useRef } from "react";
 
-function Telegram({onLogin}) {
+function Telegram({ onLogin }) {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        // Определяем функцию ДО вставки скрипта
         window.TelegramLoginWidget = {
         dataOnauth: async (user) => {
-            console.log("Данные от Telegram:", user); // теперь увидишь в консоли
+            console.log("Данные от Telegram:", user);
+
+            // сразу вставляем фото
+            if (user.photo_url) {
+            const avatar = document.getElementById("tgAvatar");
+            if (avatar) {
+                avatar.src = user.photo_url;
+            }
+            }
 
             try {
             const res = await fetch("https://galzun-nay-c390.twc1.net/auth/telegram", {
@@ -17,34 +24,27 @@ function Telegram({onLogin}) {
             });
             const data = await res.json();
             console.log("Ответ сервера:", data);
+
             if (data.token) {
                 localStorage.setItem("token", data.token);
                 onLogin(); // обновляем голоса сразу после входа
-                window.TelegramLoginWidget = {
-                dataOnauth: async (user) => {
-                    console.log("Данные от Telegram:", user);
-                    if (user.photo_url) {
-                    document.getElementById("tgAvatar").src = user.photo_url;
-                    }
-                }
-                };
             }
             } catch (err) {
             console.error("Ошибка запроса:", err);
             }
         },
-    };
+        };
 
-    const script = document.createElement("script");
-    script.src = "https://telegram.org/js/telegram-widget.js?22";
-    script.async = true;
-    script.setAttribute("data-telegram-login", "GalzunNay_bot"); // username твоего бота
-    script.setAttribute("data-size", "large");
-    script.setAttribute("data-userpic", "false");
-    script.setAttribute("data-request-access", "write");
-    script.setAttribute("data-onauth", "TelegramLoginWidget.dataOnauth(user)");
+        const script = document.createElement("script");
+        script.src = "https://telegram.org/js/telegram-widget.js?22";
+        script.async = true;
+        script.setAttribute("data-telegram-login", "GalzunNay_bot");
+        script.setAttribute("data-size", "large");
+        script.setAttribute("data-userpic", "false");
+        script.setAttribute("data-request-access", "write");
+        script.setAttribute("data-onauth", "TelegramLoginWidget.dataOnauth(user)");
 
-    if (containerRef.current) {
+        if (containerRef.current) {
         containerRef.current.innerHTML = "";
         containerRef.current.appendChild(script);
         }
