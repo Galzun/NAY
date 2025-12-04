@@ -110,10 +110,11 @@ router.get("/my", auth, async (req, res) => {
         const votes = await Vote.find({ userId: req.userId });
         res.json(votes);
     } catch (err) {
-        console.error(err);
+        console.error("Ошибка при получении голосов:", err);
         res.status(500).json({ message: "Ошибка сервера" });
     }
 });
+
 
 
 export default router;

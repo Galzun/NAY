@@ -10,19 +10,19 @@ export default function Slayking({visibleQuin, setvisibleQuin, onVote}) {
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
     const confirmVote = async (streamer) => {
-        const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
+    const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "SlayQing", streamer }),
-        });
-        const data = await res.json();
-        console.log("Ответ сервера:", data);
+        body: JSON.stringify({ category: "SlayQuin", streamer }),
+    });
+    const data = await res.json();
+    console.log("Ответ сервера:", data);
 
-        // после голосования обновляем список голосов
-        onVote();
+    // обновляем список голосов
+    onVote();
     };
 
 
@@ -43,9 +43,9 @@ export default function Slayking({visibleQuin, setvisibleQuin, onVote}) {
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
                             </p>
                             <div
-                                className="slayking__body-card__button"
-                                onClick={confirmVote} disabled={!selectedStreamer}>
-                                Подтвердить
+                            className="slayking__body-card__button"
+                            onClick={() => confirmVote(selectedStreamer)} disabled={!selectedStreamer}>
+                            Подтвердить
                             </div>
                             <div className="slayking__header-img">
                                 <img src={Cs}></img>

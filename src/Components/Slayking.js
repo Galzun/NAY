@@ -10,19 +10,19 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
     const confirmVote = async (streamer) => {
-        const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
+    const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({ category: "SlayKing", streamer }),
-        });
-        const data = await res.json();
-        console.log("Ответ сервера:", data);
+    });
+    const data = await res.json();
+    console.log("Ответ сервера:", data);
 
-        // после голосования обновляем список голосов
-        onVote();
+    // обновляем список голосов
+    onVote();
     };
 
 
