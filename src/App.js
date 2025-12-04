@@ -25,22 +25,18 @@ export default function App() {
 	const [myVotes, setMyVotes] = useState({});
 
 	const fetchMyVotes = async () => {
-	const res = await fetch("https://galzun-nay-c390.twc1.net/vote/my", {
+		const res = await fetch("https://galzun-nay-c390.twc1.net/vote/my", {
 		headers: {
-		Authorization: `Bearer ${localStorage.getItem("token")}`,
+			Authorization: `Bearer ${localStorage.getItem("token")}`,
 		},
-	});
-	const data = await res.json();
-	const votesMap = {};
-	data.forEach(v => {
-		votesMap[v.category] = {
-		name: v.streamer_name,
-		image: v.streamer_image
-		};
-	});
-	setMyVotes(votesMap);
+		});
+		const data = await res.json();
+		const votesMap = {};
+		data.forEach(v => {
+		votesMap[v.category] = v.streamer_name;
+		});
+		setMyVotes(votesMap);
 	};
-
 
 		useEffect(() => {
 	if (localStorage.getItem("token")) {
