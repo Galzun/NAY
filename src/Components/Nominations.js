@@ -9,18 +9,21 @@ export default function Nominations({setvisibleKing, setvisibleQuin}) {
     const [myVotes, setMyVotes] = useState({});
 
     useEffect(() => {
-        axios.get("/api/vote/myvote", {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-        })
-        .then(res => {
-        // Преобразуем массив в объект { SlayKing: "5opka", SlayQuin: "Лиза" }
+        const fetchVotes = async () => {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/vote/my", {
+            headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        });
+        const data = await res.json();
+        // Преобразуем массив в объект { category: streamer }
         const votesMap = {};
-        res.data.forEach(v => {
+        data.forEach(v => {
             votesMap[v.category] = v.streamer_name;
         });
         setMyVotes(votesMap);
-        })
-        .catch(err => console.error(err));
+        };
+        fetchVotes();
     }, []);
 
     return (
@@ -36,7 +39,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin}) {
                                         SlayKing
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes["SlayKing"] || "—"} {/* если голос есть, показываем ник */}
+                                        {myVotes["SlayKing"] || "—"} {/* показываем стримера из бэкенда */}
                                     </li>
                                     <li onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
                                         Сделать выбор

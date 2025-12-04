@@ -105,11 +105,12 @@ router.get("/stats", async (req, res) => {
     }
 });
 
-router.get("/myvote", auth, async (req, res) => {
+router.get("/my", auth, async (req, res) => {
     try {
         const votes = await Vote.find({ userId: req.userId });
-        res.json(votes); // [{category:"SlayKing", streamer_name:"5opka"}, ...]
+        res.json(votes);
     } catch (err) {
+        console.error(err);
         res.status(500).json({ message: "Ошибка сервера" });
     }
 });
