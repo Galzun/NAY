@@ -28,7 +28,7 @@ export default function App() {
 				<Menu/>
 				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing}/>
 				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin}/>
-				<Nominations setvisibleKing={setvisibleKing}/>
+				<Nominations setvisibleKing={setvisibleKing} setvisibleQuin={setvisibleQuin}/>
 				<Reg/>
 				<Telegram/>
 			</div>
