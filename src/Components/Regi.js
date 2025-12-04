@@ -1,7 +1,7 @@
 // Regi.js
 import { useState } from "react";
 
-function Auth() {
+function Auth({onLogin}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -22,8 +22,11 @@ function Auth() {
         });
         const data = await res.json();
         console.log(data);
-
-        localStorage.setItem("token", data.token); // сохраняем токен
+        
+        if (data.token) {
+            localStorage.setItem("token", data.token);
+            onLogin(); // обновляем голоса сразу после входа
+        }
     };
 
     return (

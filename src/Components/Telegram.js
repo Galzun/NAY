@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-function Telegram() {
+function Telegram({onLogin}) {
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -17,7 +17,10 @@ function Telegram() {
             });
             const data = await res.json();
             console.log("Ответ сервера:", data);
-            localStorage.setItem("token", data.token);
+            if (data.token) {
+                localStorage.setItem("token", data.token);
+                onLogin(); // обновляем голоса сразу после входа
+            }
             } catch (err) {
             console.error("Ошибка запроса:", err);
             }
@@ -37,7 +40,7 @@ function Telegram() {
         containerRef.current.innerHTML = "";
         containerRef.current.appendChild(script);
         }
-    }, []);
+    }, [onLogin]);
 
     return <div ref={containerRef}></div>;
 }
