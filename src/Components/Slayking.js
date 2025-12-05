@@ -53,27 +53,27 @@ export default function Slayking({visibleKing, setvisibleKing, onVote}) {
                         <div className="slayking__body">
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
+                                    <img src={streamerImages["Gargamel"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    5opka
+                                    Gargamel
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("5opka")}>
+                                    onClick={() => setSelectedStreamer("Gargamel")}>
                                     Выбрать
                                 </div>
                         </div>
                         <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Sasavot"]}></img>
+                                    <img src={streamerImages["Kot_Cvetkov"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Sasavot
+                                    Kot_Cvetkov
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Sasavot")}>
+                                    onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
                                     Выбрать
                                 </div>
                         </div>

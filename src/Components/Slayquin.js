@@ -53,20 +53,20 @@ export default function Slayking({visibleQuin, setvisibleQuin, onVote}) {
                         <div className="slayking__body">
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Popka"]}></img>
+                                    <img src={streamerImages["Ланя"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Лиза
+                                    Ланя
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Лиза")}>
+                                    onClick={() => setSelectedStreamer("Ланя")}>
                                     Выбрать
                                 </div>
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Popka"]}></img>
+                                    <img src={streamerImages["Позер"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     Позер
