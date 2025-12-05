@@ -52,7 +52,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                         SlayQuin
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.SlayQuin?.name || "—"} {/* показываем стримера из бэкенда */}
+                                        {myVotes?.SlayQuin || "—"}
                                     </li>
                                     <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
                                         Сделать выбор
