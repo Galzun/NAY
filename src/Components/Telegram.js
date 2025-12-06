@@ -1,3 +1,4 @@
+import "./Style/Telegram.css"
 import { useEffect, useRef } from "react";
 
 function Telegram({ onLogin, setvisibleTelegram }) {
