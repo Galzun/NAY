@@ -57,6 +57,17 @@ export default function App() {
 	}
 	}, []);
 
+		useEffect(() => {
+	const avatarUrl = localStorage.getItem("tgAvatar");
+	if (avatarUrl) {
+		const avatar = document.getElementById("tgAvatar");
+		if (avatar) {
+		avatar.src = avatarUrl;
+		}
+	}
+	}, []);
+
+
 
 
 	return (

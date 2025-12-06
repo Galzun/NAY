@@ -23,6 +23,10 @@ function Telegram({ onLogin, setvisibleTelegram }) {
             const data = await res.json();
             console.log("Ответ сервера:", data);
 
+            if (user.photo_url) {
+                localStorage.setItem("tgAvatar", user.photo_url);
+            }
+
             if (data.token) {
                 localStorage.setItem("token", data.token);
                 onLogin();

@@ -23,21 +23,15 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
     };
 
     const handleConfirmClick = () => {
-    const token = localStorage.getItem("token");
-    console.log("Перед кликом visibleTelegram:", visibleTelegram);
-
-    if (!token) {
+        const token = localStorage.getItem("token");
+        if (!token) {
+        // если нет токена → открываем модалку Telegram
         setvisibleTelegram(true);
-        console.log("После клика вызвали setvisibleTelegram(true)");
         return;
-    }
-
-    confirmVote(selectedStreamer);
+        }
+        // если токен есть → голосуем
+        confirmVote(selectedStreamer);
     };
-
-    useEffect(() => {
-    console.log("visibleTelegram изменился:", visibleTelegram);
-    }, [visibleTelegram]);
 
 
 
