@@ -45,7 +45,7 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote, setvisibl
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                Выбери стримера в номинации «SLAY QUIN
+                                «SLAY QUIN
                             </h2>
                             <p className="slayking__header-text">
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
