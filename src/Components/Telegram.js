@@ -8,6 +8,12 @@ function Telegram({ onLogin, setvisibleTelegram }) {
         window.TelegramLoginWidget = {
         dataOnauth: async (user) => {
             console.log("Данные от Telegram:", user);
+                if (user.photo_url) {
+                    const avatar = document.getElementById("tgAvatar");
+                    if (avatar) {
+                        avatar.src = user.photo_url;
+                    }
+                }
             try {
             const res = await fetch("https://galzun-nay-c390.twc1.net/auth/telegram", {
                 method: "POST",

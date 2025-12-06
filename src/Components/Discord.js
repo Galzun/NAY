@@ -15,7 +15,7 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "SlayQuin", streamer }),
+        body: JSON.stringify({ category: "Discord", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);

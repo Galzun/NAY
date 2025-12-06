@@ -24,7 +24,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
 
     const handleConfirmClick = () => {
     const token = localStorage.getItem("token");
-    console.log("Перед кликом visibleTelegram:", visibleTelegram, token);
+    console.log("Перед кликом visibleTelegram:", visibleTelegram);
 
     if (!token) {
         setvisibleTelegram(true);
@@ -38,7 +38,6 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
     useEffect(() => {
     console.log("visibleTelegram изменился:", visibleTelegram);
     }, [visibleTelegram]);
-
 
 
 
@@ -58,11 +57,11 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
                             <p className="slayking__header-text">
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
                             </p>
-                            <button
+                            <div
                             className="slayking__body-card__button"
                             onClick={handleConfirmClick} disabled={!selectedStreamer}>
                             Подтвердить
-                            </button>
+                            </div>
                             <div className="slayking__header-img">
                                 <img src={streamerImages["SlayKing"]}></img>
                             </div>
