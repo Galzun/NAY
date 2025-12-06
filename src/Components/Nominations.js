@@ -4,7 +4,7 @@ import "./Style/Nominations.css"
 import streamerImages from "./Static/streamerImages"
 import { useState, useEffect } from "react";
 
-export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, setMyVotes}) {
+export default function Nominations({setvisibleKing, setvisibleQuin, setvisibleDiscord, myVotes, setMyVotes}) {
 
     useEffect(() => {
         const fetchVotes = async () => {
@@ -49,7 +49,7 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                     <li className="nominations-card_name">
                                         {myVotes?.SlayKing || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
+                                    <li onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -83,25 +83,25 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                             <div className="nominations-nomination">
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.SlayKing &&
+                                    {myVotes?.Discord &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.SlayKing] || streamerImages["Gargamel"]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Discord]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.SlayKing &&
+                                    {!myVotes?.Discord &&
                                     <li className="nominations-card_img">
-                                        <img src={streamerImages["SlayKing"]} alt="avatar"/>
+                                        <img src={streamerImages["Discord"]} alt="avatar"/>
                                     </li>
                                     }
                                     </li>
                                     <li>
                                     <li className="nominations-card_nomination">
-                                        SlayQuin
+                                        Discord
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.SlayQuin || "—"}
+                                        {myVotes?.Discord || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
+                                    <li onClick={() => setvisibleDiscord(true)} className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>

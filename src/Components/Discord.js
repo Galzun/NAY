@@ -1,10 +1,10 @@
-// Slayquin.js
+// Discord.js
 
 import "./Style/Slayking.css"
 import streamerImages from "./Static/streamerImages.js"
 import { useState } from "react";
 
-export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
+export default function Discord({visibleDiscord, setvisibleDiscord, onVote}) {
     
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
@@ -15,7 +15,7 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "SlayQuin", streamer }),
+        body: JSON.stringify({ category: "Discord", streamer }),
     });
     const data = await res.json();
     console.log("Ответ сервера:", data);
@@ -27,16 +27,16 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
 
     return (
         <div>
-            {visibleQuin &&
+            {visibleDiscord &&
             <div className='slayking-wrapper'>
                 <div className='container'>
                     <div className='slayking'>
                         <div className="slayking__close">
-                            <span onClick={() => setvisibleQuin(false)} ></span>
+                            <span onClick={() => setvisibleDiscord(false)} ></span>
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                Выбери стримера в номинации «SLAY QUIN
+                                Выбери стримера в номинации «Discord»
                             </h2>
                             <p className="slayking__header-text">
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
@@ -47,37 +47,37 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
                             Подтвердить
                             </div>
                             <div className="slayking__header-img">
-                                <img src={streamerImages["SlayQuin"]}></img>
+                                <img src={streamerImages["Discord"]}></img>
                             </div>
                         </div>
                         <div className="slayking__body">
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Ланя"]}></img>
+                                    <img src={streamerImages["Gargamel"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Ланя
+                                    Gargamel
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Ланя")}>
+                                    onClick={() => setSelectedStreamer("Gargamel")}>
                                     Выбрать
                                 </div>
-                            </div>
-                            <div className="slayking__body-card">
+                        </div>
+                        <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Позер"]}></img>
+                                    <img src={streamerImages["Kot_Cvetkov"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Позер
+                                    Kot_Cvetkov
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Позер")}>
+                                    onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
                                     Выбрать
                                 </div>
-                            </div>
-                            <div className="slayking__body-card">
+                        </div>
+                        <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
                                     <img src={streamerImages["5opka"]}></img>
                                 </div>
@@ -87,8 +87,8 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
                                 <div className="slayking__body-card__button">
                                     Выбрать
                                 </div>
-                            </div>
-                            <div className="slayking__body-card">
+                        </div>
+                        <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
                                     <img src={streamerImages["5opka"]}></img>
                                 </div>
@@ -98,8 +98,8 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
                                 <div className="slayking__body-card__button">
                                     Выбрать
                                 </div>
-                            </div>
-                            <div className="slayking__body-card">
+                        </div>
+                        <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
                                     <img src={streamerImages["5opka"]}></img>
                                 </div>
@@ -109,11 +109,11 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
                                 <div className="slayking__body-card__button">
                                     Выбрать
                                 </div>
-                            </div>
-                            <div className="slayking__body-card">
+                        </div>
+                        <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
                                     <img src={streamerImages["5opka"]}></img>
-                                </div>
+                            </div>
                                 <h3 className="slayking__body-card__name">
                                     5opka
                                 </h3>

@@ -4,6 +4,7 @@ import Menu from "./Components/Menu.js"
 import Nominations from "./Components/Nominations.js"
 import Slayking from "./Components/Slayking.js"
 import Slayquin from "./Components/Slayquin.js"
+import Discord from "./Components/Discord.js"
 import Regi from "./Components/Regi.js"
 import Telegram from "./Components/Telegram.js"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
@@ -13,6 +14,9 @@ export default function App() {
 
 	const [visibleKing, setvisibleKing] = useState(false);
 	const [visibleQuin, setvisibleQuin] = useState(false);
+	const [visibleDiscord, setvisibleDiscord] = useState(false);
+
+	const [visibleTelegram, setvisibleTelegram] = useState(false);
 
 	useEffect(() => {
 		if (visibleKing || visibleQuin) {
@@ -50,11 +54,18 @@ export default function App() {
 		<Router>
 			<div>
 				<Menu/>
-				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing} onVote={fetchMyVotes}/>
-				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin} onVote={fetchMyVotes}/>
-				<Nominations setvisibleKing={setvisibleKing} setvisibleQuin={setvisibleQuin} myVotes={myVotes} setMyVotes={setMyVotes}/>
+				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
+				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
+				<Discord visibleDiscord={visibleDiscord} setvisibleDiscord={setvisibleDiscord} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
+
+				<Nominations
+				setvisibleKing={setvisibleKing}
+				setvisibleQuin={setvisibleQuin}
+				setvisibleDiscord={setvisibleDiscord}
+				
+				myVotes={myVotes} setMyVotes={setMyVotes}/>
 				<Regi onLogin={fetchMyVotes}/>
-				<Telegram onLogin={fetchMyVotes}/>
+				{visibleTelegram && <Telegram onLogin={fetchMyVotes} setvisibleTelegram={setvisibleTelegram} />}
 			</div>
 		</Router>
 	);
