@@ -4,7 +4,7 @@ import "./Style/Slayking.css"
 import streamerImages from "./Static/streamerImages.js"
 import { useState } from "react";
 
-export default function Slayking({visibleKing, setvisibleKing, onVote, setvisibleTelegram}) {
+export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTelegram, setvisibleTelegram}) {
     
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
@@ -22,16 +22,19 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, setvisibl
         onVote();
     };
 
-    const handleConfirmClick = () => {
-        const token = localStorage.getItem("token");
-        if (!token) {
-        // если нет токена → открываем модалку Telegram
+const handleConfirmClick = () => {
+    const token = localStorage.getItem("token");
+    console.log("Перед кликом visibleTelegram:", visibleTelegram);
+
+    if (!token) {
         setvisibleTelegram(true);
+        console.log("visibleTelegram сейчас:", visibleTelegram);
         return;
-        }
-        // если токен есть → голосуем
-        confirmVote(selectedStreamer);
-    };
+    }
+
+    confirmVote(selectedStreamer);
+};
+
 
 
     return (
