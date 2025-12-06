@@ -24,7 +24,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
 
     const handleConfirmClick = () => {
     const token = localStorage.getItem("token");
-    console.log("Перед кликом visibleTelegram:", visibleTelegram);
+    console.log("Перед кликом visibleTelegram:", visibleTelegram, token);
 
     if (!token) {
         setvisibleTelegram(true);
