@@ -65,7 +65,7 @@ export default function App() {
 				
 				myVotes={myVotes} setMyVotes={setMyVotes}/>
 				<Regi onLogin={fetchMyVotes}/>
-				{!visibleTelegram && <Telegram onLogin={fetchMyVotes} setvisibleTelegram={setvisibleTelegram} />}
+				{visibleTelegram && <Telegram onLogin={fetchMyVotes} setvisibleTelegram={setvisibleTelegram} />}
 			</div>
 		</Router>
 	);
