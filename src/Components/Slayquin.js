@@ -4,24 +4,33 @@ import "./Style/Slayking.css"
 import streamerImages from "./Static/streamerImages.js"
 import { useState } from "react";
 
-export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
+export default function Slayquin({visibleQuin, setvisibleQuin, onVote, setvisibleTelegram}) {
     
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
     const confirmVote = async (streamer) => {
-    const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/vote", {
         method: "POST",
         headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({ category: "SlayQuin", streamer }),
-    });
-    const data = await res.json();
-    console.log("Ответ сервера:", data);
+        });
+        const data = await res.json();
+        console.log("Ответ сервера:", data);
+        onVote();
+    };
 
-    // обновляем список голосов
-    onVote();
+    const handleConfirmClick = () => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+        // если нет токена → открываем модалку Telegram
+        setvisibleTelegram(true);
+        return;
+        }
+        // если токен есть → голосуем
+        confirmVote(selectedStreamer);
     };
 
 
@@ -43,7 +52,7 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote}) {
                             </p>
                             <div
                             className="slayking__body-card__button"
-                            onClick={() => confirmVote(selectedStreamer)} disabled={!selectedStreamer}>
+                            onClick={handleConfirmClick} disabled={!selectedStreamer}>
                             Подтвердить
                             </div>
                             <div className="slayking__header-img">
