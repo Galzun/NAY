@@ -30,56 +30,93 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                         <div className='nominations'>
                             <div className="nominations-king">
                                 <ul className="nominations-card-king">
-                                    <li className="nominations-card-block-img">
-                                        {myVotes?.SlayKing &&
-                                        <li className="nominations-card_img">
-                                            <img src={streamerImages[myVotes?.SlayKing]} alt="avatar"/>
-                                        </li>
-                                        }
-                                        {!myVotes?.SlayKing &&
-                                        <li className="nominations-card_img">
-                                            <img src={streamerImages["SlayKing"]} alt="avatar"/>
-                                        </li>
-                                        }
+                                    <li className="nominations-card-half">
+                                    {myVotes?.SlayKing &&
+                                    <li className="nominations-card_img-king-activ">
+                                        <img src={streamerImages[myVotes?.SlayKing]} alt="avatar"/>
                                     </li>
-                                    <li className="nominations-card-block-text">
-                                        <li className="nominations-card_nomination">
-                                            SlayKing
-                                        </li>
-                                        <li className="nominations-card_name">
-                                            {myVotes?.SlayKing || "—"}
-                                        </li>
-                                        <li
-                                            onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
-                                            Сделать выбор
-                                        </li>
+                                    }
+                                    {!myVotes?.SlayKing &&
+                                    <li className="nominations-card_img-king">
+                                        <img src={streamerImages["SlayKing"]} alt="avatar"/>
+                                    </li>
+                                    }
+                                    </li>
+                                    <li>
+                                    <li className="nominations-card_nomination">
+                                        SlayKing
+                                    </li>
+                                    <li className="nominations-card_name">
+                                        {myVotes?.SlayKing || "—"}
+                                    </li>
+                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
+                                        Сделать выбор
+                                    </li>
                                     </li>
                                 </ul>
                                 <ul className="nominations-card-king">
-                                    <li className="nominations-card-block-img">
-                                        <li className="nominations-card_img">
-                                            <img src={streamerImages[myVotes?.SlayQuin] || streamerImages["SlayQuin"]} alt="avatar"/>
-                                        </li>
+                                    <li className="nominations-card-half">
+                                    {myVotes?.SlayQuin &&
+                                    <li className="nominations-card_img-king-activ">
+                                        <img src={streamerImages[myVotes?.SlayQuin]} alt="avatar"/>
                                     </li>
-                                    <li className="nominations-card-block-text">
-                                        <li className="nominations-card_nomination">
-                                            SlayQuin
-                                        </li>
-                                        <li className="nominations-card_name">
-                                            {myVotes?.SlayQuin || "—"}
-                                        </li>
-                                        <li
-                                            onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
-                                            Сделать выбор
-                                        </li>
+                                    }
+                                    {!myVotes?.SlayQuin &&
+                                    <li className="nominations-card_img-king">
+                                        <img src={streamerImages["SlayQuin"]} alt="avatar"/>
+                                    </li>
+                                    }
+                                    </li>
+                                    <li>
+                                    <li className="nominations-card_nomination">
+                                        SlayQuin
+                                    </li>
+                                    <li className="nominations-card_name">
+                                        {myVotes?.SlayQuin || "—"}
+                                    </li>
+                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
+                                        Сделать выбор
+                                    </li>
                                     </li>
                                 </ul>
                             </div>
                             <div className="nominations-nomination">
                                 <ul className="nominations-card">
-                                    <li className="nominations-card_img">
-                                        <img src={streamerImages[myVotes?.SlayQuin] || streamerImages["SlayQuin"]} alt="avatar"/>
+                                    <li className="nominations-card-half">
+                                    {myVotes?.SlayKing &&
+                                    <li className="nominations-card_img-activ">
+                                        <img src={streamerImages[myVotes?.SlayKing] || streamerImages["Gargamel"]} alt="avatar"/>
                                     </li>
+                                    }
+                                    {!myVotes?.SlayKing &&
+                                    <li className="nominations-card_img">
+                                        <img src={streamerImages["SlayKing"]} alt="avatar"/>
+                                    </li>
+                                    }
+                                    </li>
+                                    <li>
+                                    <li className="nominations-card_nomination">
+                                        SlayQuin
+                                    </li>
+                                    <li className="nominations-card_name">
+                                        {myVotes?.SlayQuin || "—"}
+                                    </li>
+                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
+                                        Сделать выбор
+                                    </li>
+                                    </li>
+                                </ul>
+                                <ul className="nominations-card">
+                                    {!myVotes?.SlayKing &&
+                                    <li className="nominations-card_img-activ">
+                                        <img src={streamerImages[myVotes?.SlayKing] || streamerImages["Gargamel"]} alt="avatar"/>
+                                    </li>
+                                    }
+                                    {myVotes?.SlayKing &&
+                                    <li className="nominations-card_img">
+                                        <img src={streamerImages["SlayKing"]} alt="avatar"/>
+                                    </li>
+                                    }
                                     <li className="nominations-card_nomination">
                                         SlayQuin
                                     </li>
@@ -91,23 +128,16 @@ export default function Nominations({setvisibleKing, setvisibleQuin, myVotes, se
                                     </li>
                                 </ul>
                                 <ul className="nominations-card">
+                                    {!myVotes?.SlayKing &&
+                                    <li className="nominations-card_img-activ">
+                                        <img src={streamerImages[myVotes?.SlayKing] || streamerImages["Gargamel"]} alt="avatar"/>
+                                    </li>
+                                    }
+                                    {myVotes?.SlayKing &&
                                     <li className="nominations-card_img">
-                                        <img src={streamerImages[myVotes?.SlayQuin] || streamerImages["SlayQuin"]} alt="avatar"/>
+                                        <img src={streamerImages["SlayKing"]} alt="avatar"/>
                                     </li>
-                                    <li className="nominations-card_nomination">
-                                        SlayQuin
-                                    </li>
-                                    <li className="nominations-card_name">
-                                        {myVotes?.SlayQuin || "—"}
-                                    </li>
-                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
-                                        Сделать выбор
-                                    </li>
-                                </ul>
-                                <ul className="nominations-card">
-                                    <li className="nominations-card_img">
-                                        <img src={streamerImages[myVotes?.SlayQuin] || streamerImages["SlayQuin"]} alt="avatar"/>
-                                    </li>
+                                    }
                                     <li className="nominations-card_nomination">
                                         SlayQuin
                                     </li>

@@ -17,13 +17,13 @@
 }
 
 .nominations-card-king {
-    max-width: 600px;
+    width: 600px;
     height: 670px;
     align-items: center;
-    padding: 0 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid #000;
 }
 
 .nominations-nomination {
@@ -32,19 +32,84 @@
 }
 
 .nominations-card {
-    padding: 0px 60px;
     width: 400px;
+    height: 570px;
     align-items: center;
     margin: 0px 0px 60px 0px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nominations-card-half {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 1px solid #000;
 }
 
 .nominations-card_img {
-    width: 100%;
-    border-radius: 50%;
+    width: 260px;
 }
 
 .nominations-card_img img {
     width: 100%;
+}
+
+.nominations-card_img-king {
+    width: 320px;
+}
+
+.nominations-card_img-king img {
+    width: 100%;
+}
+
+.nominations-card_img-king-activ {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nominations-card_img-king-activ img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nominations-card_img-activ {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nominations-card_img-activ img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nominations-card_img-activ-king {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nominations-card_img-activ-king img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .nominations-card_nomination {
@@ -59,7 +124,7 @@
     font-size: 28px;
     color: #808080;
     text-align: center;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 10px 0px;
 }
 
 .nominations-card_buttom {
