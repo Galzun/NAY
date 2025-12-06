@@ -118,6 +118,8 @@
     margin: 0px 0px 60px 0px;
 }
 .slayking__body-card__img {
+    border-radius: 50%;
+    overflow: hidden;
 }
 .slayking__body-card__img img {
     width: 100%;

@@ -1,4 +1,5 @@
 .nominations-wrapper {
+    padding: 100px 0px 0px 0px;
 }
 
 .container {
@@ -7,7 +8,7 @@
 .nominations {
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
 }
 
 .nominations-king {
@@ -17,8 +18,12 @@
 
 .nominations-card-king {
     max-width: 600px;
-    padding: 0px 50px;
+    height: 670px;
     align-items: center;
+    padding: 0 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .nominations-nomination {
@@ -27,10 +32,15 @@
 }
 
 .nominations-card {
-    padding: 0px 0px;
+    padding: 0px 60px;
     width: 400px;
     align-items: center;
     margin: 0px 0px 60px 0px;
+}
+
+.nominations-card_img {
+    width: 100%;
+    border-radius: 50%;
 }
 
 .nominations-card_img img {

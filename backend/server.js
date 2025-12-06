@@ -6,6 +6,7 @@ import connectDB from "./db.js";
 import voteRoutes from "./routes/vote.js";
 import authRoutes from "./routes/auth.js";
 
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
