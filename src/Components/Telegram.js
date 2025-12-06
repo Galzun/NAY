@@ -1,21 +1,12 @@
 import { useEffect, useRef } from "react";
 
-function Telegram({ onLogin }) {
+function Telegram({ onLogin, setvisibleTelegram }) {
     const containerRef = useRef(null);
 
     useEffect(() => {
         window.TelegramLoginWidget = {
         dataOnauth: async (user) => {
             console.log("Данные от Telegram:", user);
-
-            // сразу вставляем фото
-            if (user.photo_url) {
-            const avatar = document.getElementById("tgAvatar");
-            if (avatar) {
-                avatar.src = user.photo_url;
-            }
-            }
-
             try {
             const res = await fetch("https://galzun-nay-c390.twc1.net/auth/telegram", {
                 method: "POST",
@@ -27,7 +18,8 @@ function Telegram({ onLogin }) {
 
             if (data.token) {
                 localStorage.setItem("token", data.token);
-                onLogin(); // обновляем голоса сразу после входа
+                onLogin();
+                setvisibleTelegram(false); // закрываем модалку после успешного входа
             }
             } catch (err) {
             console.error("Ошибка запроса:", err);
@@ -48,9 +40,17 @@ function Telegram({ onLogin }) {
         containerRef.current.innerHTML = "";
         containerRef.current.appendChild(script);
         }
-    }, [onLogin]);
+    }, [onLogin, setvisibleTelegram]);
 
-    return <div ref={containerRef}></div>;
+    return (
+        <div className="modal-overlay">
+        <div className="modal">
+            <button className="close-btn" onClick={() => setvisibleTelegram(false)}>×</button>
+            <h2>Вход через Telegram</h2>
+            <div ref={containerRef}></div>
+        </div>
+        </div>
+    );
 }
 
 export default Telegram;
