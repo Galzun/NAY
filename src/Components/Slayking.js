@@ -2,7 +2,7 @@
 
 import "./Style/Slayking.css"
 import streamerImages from "./Static/streamerImages.js"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTelegram, setvisibleTelegram}) {
     
