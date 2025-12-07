@@ -22,6 +22,20 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
         onVote();
     };
 
+    const cancelVote = async () => {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/vote/cancel", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify({ category: "Discord" }),
+        });
+        const data = await res.json();
+        console.log("Отмена голоса:", data);
+        onVote();
+    };
+
     const handleConfirmClick = () => {
         const token = localStorage.getItem("token");
         if (!token) {
@@ -56,38 +70,17 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
                             onClick={handleConfirmClick} disabled={!selectedStreamer}>
                             Подтвердить
                             </div>
+                            <div
+                            className="slayking__body-card__button"
+                            onClick={cancelVote}>
+                            Отменить голос
+                            </div>
                             <div className="slayking__header-img">
                                 <img src={streamerImages["SlayKing"]}></img>
                             </div>
                         </div>
                         <div className="slayking__body">
                             <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Gargamel"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    Gargamel
-                                </h3>
-                                <div
-                                    className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Gargamel")}>
-                                    Выбрать
-                                </div>
-                            </div>
-                            <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Kot_Cvetkov"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    Kot_Cvetkov
-                                </h3>
-                                <div 
-                                    className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
-                                    Выбрать
-                                </div>
-                            </div>
-                                                        <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
                                     <img src={streamerImages["Gargamel"]}></img>
                                 </div>

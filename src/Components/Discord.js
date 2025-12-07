@@ -71,8 +71,8 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
                                     onClick={() => setSelectedStreamer("Gargamel")}>
                                     Выбрать
                                 </div>
-                        </div>
-                        <div className="slayking__body-card">
+                            </div>
+                            <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
                                     <img src={streamerImages["Kot_Cvetkov"]}></img>
                                 </div>
@@ -82,72 +82,6 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
                                 <div 
                                     className="slayking__body-card__button"
                                     onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
-                                    Выбрать
-                                </div>
-                        </div>
-                        <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    5opka
-                                </h3>
-                                <div className="slayking__body-card__button">
-                                    Выбрать
-                                </div>
-                        </div>
-                        <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    5opka
-                                </h3>
-                                <div className="slayking__body-card__button">
-                                    Выбрать
-                                </div>
-                        </div>
-                        <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    5opka
-                                </h3>
-                                <div className="slayking__body-card__button">
-                                    Выбрать
-                                </div>
-                        </div>
-                        <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
-                            </div>
-                                <h3 className="slayking__body-card__name">
-                                    5opka
-                                </h3>
-                                <div className="slayking__body-card__button">
-                                    Выбрать
-                                </div>
-                            </div>
-                            <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    5opka
-                                </h3>
-                                <div className="slayking__body-card__button">
-                                    Выбрать
-                                </div>
-                            </div>
-                            <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["5opka"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    5opka
-                                </h3>
-                                <div className="slayking__body-card__button">
                                     Выбрать
                                 </div>
                             </div>

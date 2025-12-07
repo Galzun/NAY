@@ -115,6 +115,36 @@ router.get("/my", auth, async (req, res) => {
     }
 });
 
+// Отмена голоса
+router.post("/cancel", auth, async (req, res) => {
+    try {
+        const { category } = req.body;
+        if (!category) {
+            return res.status(400).json({ message: "Нужно указать category" });
+        }
+
+        const user = await User.findById(req.userId);
+        if (!user) return res.status(404).json({ message: "Пользователь не найден" });
+
+        if (!user.votes.get(category)) {
+            return res.status(400).json({ message: `У вас нет голоса в номинации ${category}` });
+        }
+
+        // Удаляем голос из коллекции Vote
+        await Vote.findOneAndDelete({ category, userId: user._id });
+
+        // Сбрасываем отметку в user.votes
+        user.votes.set(category, false);
+        await user.save();
+
+        res.json({ message: `Голос отменён в номинации ${category}` });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Ошибка сервера" });
+    }
+});
+
+
 
 
 export default router;
