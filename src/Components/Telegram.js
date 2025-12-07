@@ -56,7 +56,9 @@ function Telegram({ onLogin, setvisibleTelegram }) {
     return (
         <div className="modal-overlay">
         <div className="modal">
-            <button className="close-btn" onClick={() => setvisibleTelegram(false)}>×</button>
+            <div className="modal__close">
+                <span onClick={() => setvisibleTelegram(false)} ></span>
+            </div>
             <h2>Вход через Telegram</h2>
             <div ref={containerRef}></div>
         </div>
