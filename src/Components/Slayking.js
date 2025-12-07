@@ -29,7 +29,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Discord" }),
+            body: JSON.stringify({ category: "SlayKing" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

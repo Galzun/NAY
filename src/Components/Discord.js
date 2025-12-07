@@ -22,6 +22,20 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
         onVote();
     };
 
+    const cancelVote = async () => {
+        const res = await fetch("https://galzun-nay-c390.twc1.net/vote/cancel", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify({ category: "Discord" }),
+        });
+        const data = await res.json();
+        console.log("Отмена голоса:", data);
+        onVote();
+    };
+
     const handleConfirmClick = () => {
         const token = localStorage.getItem("token");
         if (!token) {
@@ -49,10 +63,17 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
                             <p className="slayking__header-text">
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
                             </p>
-                            <div
-                            className="slayking__body-card__button"
-                            onClick={handleConfirmClick} disabled={!selectedStreamer}>
-                            Подтвердить
+                            <div className="slayking__body-card__buttons">
+                                <div
+                                className="slayking__body-card__button"
+                                onClick={handleConfirmClick} disabled={!selectedStreamer}>
+                                Подтвердить
+                                </div>
+                                <div
+                                className="slayking__body-card__button"
+                                onClick={cancelVote}>
+                                Отменить голос
+                                </div>
                             </div>
                             <div className="slayking__header-img">
                                 <img src={streamerImages["Discord"]}></img>
