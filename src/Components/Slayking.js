@@ -65,15 +65,17 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, visibleTe
                             <p className="slayking__header-text">
                                 Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
                             </p>
-                            <div
-                            className="slayking__body-card__button"
-                            onClick={handleConfirmClick} disabled={!selectedStreamer}>
-                            Подтвердить
-                            </div>
-                            <div
-                            className="slayking__body-card__button"
-                            onClick={cancelVote}>
-                            Отменить голос
+                            <div className="slayking__body-card__buttons">
+                                <div
+                                className="slayking__body-card__button"
+                                onClick={handleConfirmClick} disabled={!selectedStreamer}>
+                                Подтвердить
+                                </div>
+                                <div
+                                className="slayking__body-card__button"
+                                onClick={cancelVote}>
+                                Отменить голос
+                                </div>
                             </div>
                             <div className="slayking__header-img">
                                 <img src={streamerImages["SlayKing"]}></img>
