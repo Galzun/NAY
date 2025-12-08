@@ -29,7 +29,7 @@ export default function Zavoz({visibleZavoz, setvisibleZavoz, onVote, setvisible
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Zavoz" }),
+            body: JSON.stringify({ category: "Завоз" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

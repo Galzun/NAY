@@ -15,7 +15,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Streamer", streamer }),
+        body: JSON.stringify({ category: "Стример", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Streamer" }),
+            body: JSON.stringify({ category: "Стример" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

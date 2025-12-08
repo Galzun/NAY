@@ -29,7 +29,7 @@ export default function Transformation({visibleTransformation, setvisibleTransfo
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Transformation" }),
+            body: JSON.stringify({ category: "Преображение" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

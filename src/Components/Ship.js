@@ -15,7 +15,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Ship", streamer }),
+        body: JSON.stringify({ category: "Шипп", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Ship" }),
+            body: JSON.stringify({ category: "Пипп" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

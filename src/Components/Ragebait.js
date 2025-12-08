@@ -15,7 +15,7 @@ export default function Ragebait({visibleRagebait, setvisibleRagebait, onVote, s
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Ragebait", streamer }),
+        body: JSON.stringify({ category: "Рэйджбайт", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Ragebait({visibleRagebait, setvisibleRagebait, onVote, s
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Ragebait" }),
+            body: JSON.stringify({ category: "Рэйджбайт" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

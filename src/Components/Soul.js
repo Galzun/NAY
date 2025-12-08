@@ -15,7 +15,7 @@ export default function Soul({visibleSoul, setvisibleSoul, onVote, setvisibleTel
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Soul", streamer }),
+        body: JSON.stringify({ category: "Душа", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Soul({visibleSoul, setvisibleSoul, onVote, setvisibleTel
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Soul" }),
+            body: JSON.stringify({ category: "Душа" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

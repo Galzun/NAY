@@ -15,7 +15,7 @@ export default function Lor({visibleLor, setvisibleLor, onVote, setvisibleTelegr
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Lor", streamer }),
+        body: JSON.stringify({ category: "Лоровед", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Lor({visibleLor, setvisibleLor, onVote, setvisibleTelegr
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Lor" }),
+            body: JSON.stringify({ category: "Лоровед" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

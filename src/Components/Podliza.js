@@ -15,7 +15,7 @@ export default function Podliza({visiblePodliza, setvisiblePodliza, onVote, setv
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Podliza", streamer }),
+        body: JSON.stringify({ category: "Подлиза", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Podliza({visiblePodliza, setvisiblePodliza, onVote, setv
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Podliza" }),
+            body: JSON.stringify({ category: "Подлиза" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);
@@ -62,7 +62,7 @@ export default function Podliza({visiblePodliza, setvisiblePodliza, onVote, setv
                             </h2>
                             <p className="slayking__header-text">
                                 Без этих людей ни пройдёт не одно мероприятие, без этих людей мы не услышим много приятного в наш счёт, без этих людей мы не посмеёмся со словами "Эх подлиза"
-                            </p>
+                            </p>    
                             <div className="slayking__body-card__buttons">
                                 <div
                                 className="slayking__body-card__button"

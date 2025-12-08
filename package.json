@@ -15,18 +15,17 @@
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.6",
     "react-scripts": "5.0.1",
+    "react-snowfall": "^2.4.0",
     "web-vitals": "^2.1.4"
   },
-"scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-
-  "server": "node src/Components/backend/server.js",
-  "clear": "node src/Components/backend/clearDB.js"
-}
-,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node src/Components/backend/server.js",
+    "clear": "node src/Components/backend/clearDB.js"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

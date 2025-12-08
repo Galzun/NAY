@@ -15,7 +15,7 @@ export default function Bloger({visibleBloger, setvisibleBloger, onVote, setvisi
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Bloger", streamer }),
+        body: JSON.stringify({ category: "Блогер", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Bloger({visibleBloger, setvisibleBloger, onVote, setvisi
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Bloger" }),
+            body: JSON.stringify({ category: "Блогер" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

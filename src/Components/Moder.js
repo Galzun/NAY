@@ -15,7 +15,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
             "Content-Type": "application/json",
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-        body: JSON.stringify({ category: "Moder", streamer }),
+        body: JSON.stringify({ category: "Модератор", streamer }),
         });
         const data = await res.json();
         console.log("Ответ сервера:", data);
@@ -29,7 +29,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Moder" }),
+            body: JSON.stringify({ category: "Модератор" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);
