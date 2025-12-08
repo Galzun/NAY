@@ -58,10 +58,10 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                «Discord»
+                                «DISCORD»
                             </h2>
                             <p className="slayking__header-text">
-                                Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
+                                Самые активные из комьюнити, которым мало только писать буковки и кидать голосовые в чатике, эти ребята готовы показать всё на что они способны
                             </p>
                             <div className="slayking__body-card__buttons">
                                 <div

@@ -62,7 +62,7 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote, setvisibl
                                 «SLAY QUIN
                             </h2>
                             <p className="slayking__header-text">
-                                Стример со средним онлайном не менее 3000 за 2025 год на основном Twitch-канале.
+                                Дама обсуждаловки, которая долгое время пробуждала чат своей красотой и общительностью
                             </p>
                             <div className="slayking__body-card__buttons">
                                 <div

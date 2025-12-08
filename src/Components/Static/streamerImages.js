@@ -2,18 +2,18 @@
 
 import SlayQuin from "./nominations/SlayQuin.png"
 import SlayKing from "./nominations/SlayKing.png"
-import Рейджбайт from "./nominations/Рейджбайт.png"
-import Frog from "./nominations/Frog.png"
-import Микрофон from "./nominations/Микрофон.png"
+import Ragebait from "./nominations/Ragebait.png"
+import Moder from "./nominations/Moder.png"
+import Streamer from "./nominations/Streamer.png"
 import Discord from "./nominations/Discord.png"
-import Сердце from "./nominations/Сердце.png"
-import Зобми from "./nominations/Зобми.png"
-import Самосвал from "./nominations/Самосвал.png"
-import Урод from "./nominations/Урод.png"
-import Книга from "./nominations/Книга.png"
-import Замок from "./nominations/Замок.png"
-import Фотоопарат from "./nominations/Фотоопарат.png"
-import Преоброжение from "./nominations/Преоброжение.png"
+import Soul from "./nominations/Soul.png"
+import Minecraft from "./nominations/Minecraft.png"
+import Zavoz from "./nominations/Zavoz.png"
+import Podliza from "./nominations/Podliza.png"
+import Lor from "./nominations/Lor.png"
+import Ship from "./nominations/Ship.png"
+import Bloger from "./nominations/Bloger.png"
+import Transformation from "./nominations/Transformation.png"
 
 import Gargamel from "./avatar/Gargamel.jpg"
 import Kot_Cvetkov from "./avatar/Kot_Cvetkov.jpg"
@@ -23,18 +23,18 @@ import Ланя from "./avatar/Ланя.jpg"
 const streamerImages = {
     "SlayQuin": SlayQuin,
     "SlayKing": SlayKing,
-    "Рейджбайт": Рейджбайт,
-    "Frog": Frog,
-    "Микрофон": Микрофон,
+    "Ragebait": Ragebait,
+    "Moder": Moder,
+    "Streamer": Streamer,
     "Discord": Discord,
-    "Сердце": Сердце,
-    "Зобми": Зобми,
-    "Самосвал": Самосвал,
-    "Урод": Урод,
-    "Книга": Книга,
-    "Замок": Замок,
-    "Фотоопарат": Фотоопарат,
-    "Преоброжение": Преоброжение,
+    "Soul": Soul,
+    "Minecraft": Minecraft,
+    "Zavoz": Zavoz,
+    "Podliza": Podliza,
+    "Lor": Lor,
+    "Ship": Ship,
+    "Bloger": Bloger,
+    "Transformation": Transformation,
 
     "Gargamel": Gargamel,
     "Kot_Cvetkov": Kot_Cvetkov,
