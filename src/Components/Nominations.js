@@ -58,7 +58,7 @@ export default function Nominations({setvisibleKing,
                                     </li>
                                     <li>
                                     <li className="nominations-card_nomination">
-                                        SLAYKING
+                                        NAYKING
                                     </li>
                                     <li className="nominations-card_name">
                                         {myVotes?.SlayKing || "—"}
@@ -83,7 +83,7 @@ export default function Nominations({setvisibleKing,
                                     </li>
                                     <li>
                                     <li className="nominations-card_nomination">
-                                        SLAYQUIN
+                                        NAYQUIN
                                     </li>
                                     <li className="nominations-card_name">
                                         {myVotes?.SlayQuin || "—"}

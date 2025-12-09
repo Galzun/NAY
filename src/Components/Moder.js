@@ -81,8 +81,8 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                         </div>
                         <div className="slayking__body">
                             <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Gargamel"]}></img>
+                                <div className="slayking__body-card__img moder-img">
+                                    <img src={streamerImages["Gargamel_mod"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     Gargamel
@@ -94,15 +94,41 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                                 </div>
                             </div>
                             <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Kot_Cvetkov"]}></img>
+                                <div className="slayking__body-card__img moder-img">
+                                    <img src={streamerImages["VaOne_mod"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Kot_Cvetkov
+                                    VaOne
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
+                                    onClick={() => setSelectedStreamer("VaOne")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img moder-img">
+                                    <img src={streamerImages["Lx_mod"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    lxtdxwn
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("lxtdxwn")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img moder-img">
+                                    <img src={streamerImages["Trevor_mod"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Тревор Шарп
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Тревор Шарп")}>
                                     Выбрать
                                 </div>
                             </div>

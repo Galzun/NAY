@@ -81,28 +81,54 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                         </div>
                         <div className="slayking__body">
                             <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Gargamel"]}></img>
+                                <div className="slayking__body-card__img transformation-img">
+                                    <img src={streamerImages["ProstoKvashaPoser_sh"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Gargamel
+                                    ProstoKvasha&Poser
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    onClick={() => setSelectedStreamer("ProstoKvasha&Poser")}>
                                     Выбрать
                                 </div>
                             </div>
                             <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Kot_Cvetkov"]}></img>
+                                <div className="slayking__body-card__img transformation-img">
+                                    <img src={streamerImages["MishaDesinovLaku_Fi_sh"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Kot_Cvetkov
+                                    MishaDesinov&Laku_Fi
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
+                                    onClick={() => setSelectedStreamer("MishaDesinov&Laku_Fi")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img transformation-img">
+                                    <img src={streamerImages["AstЛаня_sh"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Ast&Ланя
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Ast&Ланя")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img transformation-img">
+                                    <img src={streamerImages["ЛизаКот_sh"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Лиза&Кот
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Лиза&Кот")}>
                                     Выбрать
                                 </div>
                             </div>

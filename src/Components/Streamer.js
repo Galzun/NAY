@@ -84,12 +84,104 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                         <div className="slayking__body">
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Gargamel"]}></img>
+                                    <img src={streamerImages["Tofro_st"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Gargamel
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/t0fr0">Tofro</a>
                                 </h3>
                                 <div
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Tofro")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Begro_st"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/begro_spi">Begro</a>
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Begro")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Япоша_st"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/yajaposha">Япоша</a>
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Япоша")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Laku_Fi_st"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/LakuFi">Laku_Fi</a>
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Laku_Fi")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Ankera_st"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/ave_ankera">Ankera</a>
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Ankera")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["DearShiroSan_st"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/dearshirosan">DearShiroSan</a>
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("DearShiroSan")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Gargamel_st"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/Gargamel172">Gargamel</a>
+                                </h3>
+                                <div 
                                     className="slayking__body-card__button"
                                     onClick={() => setSelectedStreamer("Gargamel")}>
                                     Выбрать
@@ -97,14 +189,16 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Kot_Cvetkov"]}></img>
+                                    <img src={streamerImages["Ramzes_st"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    Kot_Cvetkov
+                                    <a target="_blank"
+                                    rel="noopener"
+                                    href="https://www.twitch.tv/ramzeskek">Ramzes</a>
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Kot_Cvetkov")}>
+                                    onClick={() => setSelectedStreamer("Ramzes")}>
                                     Выбрать
                                 </div>
                             </div>

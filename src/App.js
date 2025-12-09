@@ -18,6 +18,8 @@ import Ragebait from "./Components/Ragebait.js"
 import Podliza from "./Components/Podliza.js"
 import Regi from "./Components/Regi.js"
 import Telegram from "./Components/Telegram.js"
+
+import streamerImages from "../src/Components/Static/streamerImages.js"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
