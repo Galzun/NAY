@@ -43,8 +43,6 @@ export default function App({background, setBackground}) {
 
 	const [visibleTelegram, setvisibleTelegram] = useState(false);
 
-	const [achievements, setAchievements] = useState(0)
-
 	useEffect(() => {
 		if (visibleKing ||
 			visibleQuin ||
@@ -120,7 +118,9 @@ export default function App({background, setBackground}) {
 	}
 	}, []);
 
-
+	const [achievements, setAchievements] = useState(0)
+	const [transformationIndex, setTransformationIndex] = useState(0);
+	const [hasAchievement20, setHasAchievement20] = useState(false);
 
 
 	return (
@@ -135,7 +135,7 @@ export default function App({background, setBackground}) {
 				<Moder visibleModer={visibleModer} setvisibleModer={setvisibleModer} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
 				<Minecraft visibleMinecraft={visibleMinecraft} setvisibleMinecraft={setvisibleMinecraft} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
 				<Lor visibleLor={visibleLor} setvisibleLor={setvisibleLor} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
-				<Transformation visibleTransformation={visibleTransformation} setvisibleTransformation={setvisibleTransformation} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
+				<Transformation visibleTransformation={visibleTransformation} setvisibleTransformation={setvisibleTransformation} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram} transformationIndex={transformationIndex} setTransformationIndex={setTransformationIndex} hasAchievement20={hasAchievement20} setHasAchievement20={setHasAchievement20} achievements={achievements} setAchievements={setAchievements}/>
 				<Zavoz visibleZavoz={visibleZavoz} setvisibleZavoz={setvisibleZavoz} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
 				<Soul visibleSoul={visibleSoul} setvisibleSoul={setvisibleSoul} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
 				<Ship visibleShip={visibleShip} setvisibleShip={setvisibleShip} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
@@ -160,6 +160,8 @@ export default function App({background, setBackground}) {
 				setvisiblePodliza={setvisiblePodliza}
 
 				achievements={achievements} setAchievements={setAchievements}
+				transformationIndex={transformationIndex} setTransformationIndex={setTransformationIndex}
+				hasAchievement20={hasAchievement20} setHasAchievement20={setHasAchievement20}
 
 				myVotes={myVotes} setMyVotes={setMyVotes}/>
 				{/* <Regi onLogin={fetchMyVotes}/> */}

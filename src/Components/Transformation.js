@@ -4,7 +4,15 @@ import "./Style/Slayking.css"
 import streamerImages from "./Static/streamerImages.js"
 import { useState } from "react";
 
-export default function Transformation({visibleTransformation, setvisibleTransformation, onVote, setvisibleTelegram}) {
+export default function Transformation({
+    visibleTransformation,
+    setvisibleTransformation,
+    onVote,
+    setvisibleTelegram,
+    transformationIndex,
+    setAchievements,
+    hasAchievement20,
+    setHasAchievement20}) {
     
     const [selectedStreamer, setSelectedStreamer] = useState(null);
 
@@ -75,8 +83,14 @@ export default function Transformation({visibleTransformation, setvisibleTransfo
                                 Отменить голос
                                 </div>
                             </div>
-                            <div className="slayking__header-img">
-                                <img src={streamerImages["Transformation"]}></img>
+                            <div className={`slayking__header-img ${transformationIndex === 19 ? "achievements" : ""}`}>
+                                <img src={streamerImages.Transformation[transformationIndex]}
+                                onClick={() => {
+                                if (transformationIndex === 19 && !hasAchievement20) {
+                                    setAchievements(prev => prev + 1); // +1 к ачивкам
+                                    setHasAchievement20(true);         // отмечаем, что ачивка получена
+                                    }
+                                }}></img>
                             </div>
                         </div>
                         <div className="slayking__body">

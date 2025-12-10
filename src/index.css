@@ -45,5 +45,5 @@ body.modal-open {
 
 .Background img {
     width: 100vw;
-    background-image: url();
+    min-height: 100vh;
 }

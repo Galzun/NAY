@@ -21,6 +21,10 @@ export default function Nominations({setvisibleKing,
 
     achievements,
     setAchievements,
+    transformationIndex,
+    setTransformationIndex,
+    hasAchievement20,
+    setHasAchievement20,
     myVotes, setMyVotes}) {
 
     useEffect(() => {
@@ -40,10 +44,6 @@ export default function Nominations({setvisibleKing,
         };
         fetchVotes();
     }, []);
-
-    const [transformationIndex, setTransformationIndex] = useState(0);
-
-    const [hasAchievement20, setHasAchievement20] = useState(false);
 
     useEffect(() => {
     console.log("Achievements updated:", achievements);
