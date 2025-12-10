@@ -13,7 +13,27 @@ import Podliza from "./nominations/Podliza.png"
 import Lor from "./nominations/Lor.png"
 import Ship from "./nominations/Ship.png"
 import Bloger from "./nominations/Bloger.png"
-import Transformation from "./nominations/Transformation.png"
+
+import Transformation_ from "./nominations/Transformation_.png"
+import Transformation_2 from "./nominations/Transformation/Transformation_2.png"
+import Transformation_3 from "./nominations/Transformation/Transformation_3.png"
+import Transformation_4 from "./nominations/Transformation/Transformation_4.png"
+import Transformation_5 from "./nominations/Transformation/Transformation_5.png"
+import Transformation_6 from "./nominations/Transformation/Transformation_6.png"
+import Transformation_7 from "./nominations/Transformation/Transformation_7.png"
+import Transformation_8 from "./nominations/Transformation/Transformation_8.png"
+import Transformation_9 from "./nominations/Transformation/Transformation_9.png"
+import Transformation_10 from "./nominations/Transformation/Transformation_10.png"
+import Transformation_11 from "./nominations/Transformation/Transformation_11.png"
+import Transformation_12 from "./nominations/Transformation/Transformation_12.png"
+import Transformation_13 from "./nominations/Transformation/Transformation_13.png"
+import Transformation_14 from "./nominations/Transformation/Transformation_14.png"
+import Transformation_15 from "./nominations/Transformation/Transformation_15.png"
+import Transformation_16 from "./nominations/Transformation/Transformation_16.png"
+import Transformation_17 from "./nominations/Transformation/Transformation_17.png"
+import Transformation_18 from "./nominations/Transformation/Transformation_18.png"
+import Transformation_19 from "./nominations/Transformation/Transformation_19.png"
+import Transformation_20 from "./nominations/Transformation/Transformation_20.png"
 
 //Transformation
 import Ankera_tf from "./Transformation/Ankera_tf.png"
@@ -53,6 +73,7 @@ import DearShiroSan_st from "./Streamer/DearShiroSan.png"
 import Gargamel_st from "./Streamer/Gargamel.png"
 import Ramzes_st from "./Streamer/Ramzes.png"
 
+import сглыпа from "./avatar/сглыпа.jpg"
 import Kerryass from "./avatar/Kerryass.jpg"
 import fivsov from "./avatar/fivsov.jpg"
 import ProstoKvasha from "./avatar/ProstoKvasha.jpg"
@@ -119,7 +140,50 @@ const streamerImages = {
     "Lor": Lor,
     "Ship": Ship,
     "Bloger": Bloger,
-    "Transformation": Transformation,
+    
+    "Transformation_": Transformation_,
+    "Transformation_2": Transformation_2,
+    "Transformation_3": Transformation_3,
+    "Transformation_4": Transformation_4,
+    "Transformation_5": Transformation_5,
+    "Transformation_6": Transformation_6,
+    "Transformation_7": Transformation_7,
+    "Transformation_8": Transformation_8,
+    "Transformation_9": Transformation_9,
+    "Transformation_10": Transformation_10,
+    "Transformation_11": Transformation_11,
+    "Transformation_12": Transformation_12,
+    "Transformation_13": Transformation_13,
+    "Transformation_14": Transformation_14,
+    "Transformation_15": Transformation_15,
+    "Transformation_16": Transformation_16,
+    "Transformation_17": Transformation_17,
+    "Transformation_18": Transformation_18,
+    "Transformation_19": Transformation_19,
+    "Transformation_20": Transformation_20,
+    
+    Transformation: [
+        Transformation_,
+        Transformation_2,
+        Transformation_3,
+        Transformation_4,
+        Transformation_5,
+        Transformation_6,
+        Transformation_7,
+        Transformation_8,
+        Transformation_9,
+        Transformation_10,
+        Transformation_11,
+        Transformation_12,
+        Transformation_13,
+        Transformation_14,
+        Transformation_15,
+        Transformation_16,
+        Transformation_17,
+        Transformation_18,
+        Transformation_19,
+        Transformation_20,
+    ],
 
     //Transformation
     "Ankera_tf": Ankera_tf,
@@ -159,6 +223,7 @@ const streamerImages = {
     "Gargamel_st": Gargamel_st,
     "Ramzes_st": Ramzes_st,
 
+    "сглыпа": сглыпа,
     "Kerryass": Kerryass,
     "fivsov": fivsov,
     "ProstoKvasha": ProstoKvasha,

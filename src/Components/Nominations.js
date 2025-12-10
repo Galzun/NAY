@@ -18,6 +18,9 @@ export default function Nominations({setvisibleKing,
     setvisibleShip,
     setvisibleRagebait,
     setvisiblePodliza,
+
+    achievements,
+    setAchievements,
     myVotes, setMyVotes}) {
 
     useEffect(() => {
@@ -37,6 +40,15 @@ export default function Nominations({setvisibleKing,
         };
         fetchVotes();
     }, []);
+
+    const [transformationIndex, setTransformationIndex] = useState(0);
+
+    const [hasAchievement20, setHasAchievement20] = useState(false);
+
+    useEffect(() => {
+    console.log("Achievements updated:", achievements);
+    }, [achievements]);
+
 
     return (
                 <div className='nominations-wrapper'>
@@ -63,8 +75,12 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.SlayKing || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleKing(true)} className="nominations-card_buttom">
-                                        Сделать выбор
+                                    <li onClick={() => {
+                                        setvisibleKing(true);
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }} 
+                                        className="nominations-card_buttom">
+                                    Сделать выбор
                                     </li>
                                     </li>
                                 </ul>
@@ -83,12 +99,16 @@ export default function Nominations({setvisibleKing,
                                     </li>
                                     <li>
                                     <li className="nominations-card_nomination">
-                                        NAYQUIN
+                                        NAYQUEEN
                                     </li>
                                     <li className="nominations-card_name">
                                         {myVotes?.SlayQuin || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleQuin(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleQuin(true);
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -115,7 +135,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Discord || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleDiscord(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleDiscord(true);
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -140,7 +164,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Streamer || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleStreamer(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleStreamer(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -165,7 +193,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Bloger || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleBloger(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleBloger(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -190,7 +222,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Moder || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleModer(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleModer(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -215,7 +251,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Minecraft || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleMinecraft(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleMinecraft(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -240,7 +280,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Lor || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleLor(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleLor(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -252,11 +296,19 @@ export default function Nominations({setvisibleKing,
                                         <img src={streamerImages[myVotes?.Transformation]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Transformation &&
-                                    <li className="nominations-card_img">
-                                        <img src={streamerImages["Transformation"]} alt="avatar"/>
+                                    {!myVotes?.Transformation && (
+                                    <li className={`nominations-card_img ${transformationIndex === 19 ? "achievements" : ""}`}>
+                                        <img 
+                                        src={streamerImages.Transformation[transformationIndex]}
+                                        onClick={() => {
+                                            if (transformationIndex === 19 && !hasAchievement20) {
+                                            setAchievements(prev => prev + 1); // +1 к ачивкам
+                                            setHasAchievement20(true);         // отмечаем, что ачивка получена
+                                            }
+                                        }}
+                                        alt="avatar" />
                                     </li>
-                                    }
+                                    )}
                                     </li>
                                     <li>    
                                     <li className="nominations-card_nomination transformation">
@@ -265,7 +317,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Transformation || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleTransformation(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleTransformation(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -290,7 +346,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Zavoz || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleZavoz(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleZavoz(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -315,7 +375,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Soul || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleSoul(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleSoul(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -340,13 +404,17 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Ship || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleShip(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleShip(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
                                 </ul>
                             </div>
-                                <div className="nominations-king">
+                            <div className="nominations-king looser">
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
                                     {myVotes?.Ragebait &&
@@ -367,7 +435,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Ragebait || "—"}
                                     </li>
-                                    <li onClick={() => setvisibleRagebait(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisibleRagebait(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>
@@ -392,7 +464,11 @@ export default function Nominations({setvisibleKing,
                                     <li className="nominations-card_name">
                                         {myVotes?.Podliza || "—"}
                                     </li>
-                                    <li onClick={() => setvisiblePodliza(true)} className="nominations-card_buttom">
+                                    <li onClick={() => {
+                                        setvisiblePodliza(true)
+                                        setTransformationIndex(Math.floor(Math.random() * streamerImages.Transformation.length));
+                                        }}
+                                        className="nominations-card_buttom">
                                         Сделать выбор
                                     </li>
                                     </li>

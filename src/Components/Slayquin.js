@@ -59,7 +59,7 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote, setvisibl
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                «NAY QUIN
+                                «NAY QUEEN
                             </h2>
                             <p className="slayking__header-text">
                                 Дама обсуждаловки, которая долгое время пробуждала чат своей красотой и общительностью

@@ -1,29 +1,28 @@
 import "./Style/Menu.css"
-import { ReactComponent as VkIcon } from "./Static/Icons/vk-svgrepo-com.svg";
 import { ReactComponent as TelegramIcon } from "./Static/Icons/telegram-svgrepo-com.svg";
 
 
-export default function Menu() {
+export default function Menu({background, setBackground, achievements}) {
+
+    const visbackground = () => {
+        if (background) {
+            setBackground(false)
+        }
+        else setBackground(true)
+    }
+
 	return (
 		<div className='menu-wrapper'>
 			<div className='container'>
-				<div className='menu'>
+				<div className={`menu ${background ? "on" : ""}`}>
 					<ul className='menu-block'>
-						<a href="#">
-                            НОМИНАЦИИ
-                        </a>
-                        <a href="#">
-                            КУПИТЬ БИЛЕТЫ
-                        </a>
-                        <a href="#">
-                            FAQ
-                        </a>
+
 					</ul>
                     <ul className='menu-block_social'>
-						<a href="#">
-                            SUPPORT
-                        </a>
-                        <a rel="noopener noreferrer" target="_blank" href="https://t.me/jabalaku"><VkIcon width={38} height={38} /></a>
+                        <p className="menu-block_social-achievements">Ваши ачивки: {achievements}</p>
+                        <div className={`tumbler ${background ? "on" : ""}`} onClick={visbackground}>
+                            <div className={`tumbler-cyrcle ${background ? "on" : ""}`}></div>
+                        </div>
                         <a rel="noopener noreferrer" target="_blank" href="https://t.me/jabalaku"><TelegramIcon width={38} height={38} /></a>
                         <div className="menu-block_social-avatar">
                             <img id="tgAvatar"></img>

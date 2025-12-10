@@ -18,12 +18,13 @@ import Ragebait from "./Components/Ragebait.js"
 import Podliza from "./Components/Podliza.js"
 import Regi from "./Components/Regi.js"
 import Telegram from "./Components/Telegram.js"
+import Footer from "./Components/Footer.js"
 
 import streamerImages from "../src/Components/Static/streamerImages.js"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
-export default function App() {
+export default function App({background, setBackground}) {
 
 	const [visibleKing, setvisibleKing] = useState(false);
 	const [visibleQuin, setvisibleQuin] = useState(false);
@@ -41,6 +42,8 @@ export default function App() {
 	const [visiblePodliza, setvisiblePodliza] = useState(false);
 
 	const [visibleTelegram, setvisibleTelegram] = useState(false);
+
+	const [achievements, setAchievements] = useState(0)
 
 	useEffect(() => {
 		if (visibleKing ||
@@ -123,7 +126,7 @@ export default function App() {
 	return (
 		<Router>
 			<div>
-				<Menu/>
+				<Menu background={background} setBackground={setBackground} achievements={achievements}/>
 				<Slayking visibleKing={visibleKing} setvisibleKing={setvisibleKing} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
 				<Slayquin visibleQuin={visibleQuin} setvisibleQuin={setvisibleQuin} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
 				<Discord visibleDiscord={visibleDiscord} setvisibleDiscord={setvisibleDiscord} onVote={fetchMyVotes} setvisibleTelegram={setvisibleTelegram}/>
@@ -156,9 +159,12 @@ export default function App() {
 				setvisibleRagebait={setvisibleRagebait}
 				setvisiblePodliza={setvisiblePodliza}
 
+				achievements={achievements} setAchievements={setAchievements}
+
 				myVotes={myVotes} setMyVotes={setMyVotes}/>
-				<Regi onLogin={fetchMyVotes}/>
+				{/* <Regi onLogin={fetchMyVotes}/> */}
 				{visibleTelegram && <Telegram onLogin={fetchMyVotes} setvisibleTelegram={setvisibleTelegram} />}
+				<Footer/>
 			</div>
 		</Router>
 	);

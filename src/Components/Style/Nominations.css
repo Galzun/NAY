@@ -148,3 +148,11 @@
 .nominations-card_buttom:hover {
     background-color: #808080;
 }
+
+.looser {
+    margin: 300px 0px 100px 0px;
+}
+
+.achievements {
+    cursor: pointer;
+}
