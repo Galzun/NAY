@@ -118,12 +118,6 @@ export default function App({background, setBackground}) {
 	}
 	}, []);
 
-		useEffect(() => {
-	fetch(`/api/user/${userId}`)
-		.then(res => res.json())
-		.then(data => setHasAchievement20(data.hasAchievement20));
-	}, [userId]);
-
 
 	const [achievements, setAchievements] = useState(0)
 	const [transformationIndex, setTransformationIndex] = useState(0);

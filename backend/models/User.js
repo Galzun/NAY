@@ -6,7 +6,6 @@ const UserSchema = new mongoose.Schema({
     password: { type: String },
     telegramId: { type: String, unique: true, sparse: true },
     votes: { type: Map, of: Boolean, default: {} },
-    hasAchievement20: { type: Boolean, default: false } // новое поле
 });
 
 
