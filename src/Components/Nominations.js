@@ -304,6 +304,16 @@ export default function Nominations({setvisibleKing,
                                             if (transformationIndex === 19 && !hasAchievement20) {
                                             setAchievements(prev => prev + 1); // +1 к ачивкам
                                             setHasAchievement20(true);         // отмечаем, что ачивка получена
+                                            fetch("/api/achievement20", {
+                                            method: "POST",
+                                            headers: { "Content-Type": "application/json" },
+                                            body: JSON.stringify({ userId })
+                                            })
+                                            .then(res => res.json())
+                                            .then(data => {
+                                            setHasAchievement20(data.hasAchievement20); // синхронизируем с сервером
+                                            })
+                                            .catch(err => console.error(err));
                                             }
                                         }}
                                         alt="avatar" />
