@@ -84,17 +84,13 @@ router.get("/stats", async (req, res) => {
 
         const users = await User.find({}, { password: 0 });
 
-        function countAchievements(user) {
-            if (!user.achievements) return 0;
-            let count = 0;
-            // Берём только собственные ключи объекта
-            for (const key of Object.keys(user.achievements)) {
-                if (user.achievements[key] === true) {
-                    count++;
-                }
+            const ACHIEVEMENT_KEYS = ["achievement20", "firstVote", "allCategoriesVoted"];
+
+            function countAchievements(user) {
+                if (!user.achievements) return 0;
+                return ACHIEVEMENT_KEYS.filter(k => user.achievements[k]).length;
             }
-            return count;
-        }
+
 
         let output = "=== 📊 Статистика голосов ===\n";
         stats.forEach(cat => {
