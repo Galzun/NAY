@@ -71,12 +71,12 @@ const unlockAchievement = async (key) => {
                             <div className="nominations-king">
                                 <ul className="nominations-card-king">
                                     <li className="nominations-card-half">
-                                    {myVotes?.SlayKing &&
+                                    {myVotes?.NayKing &&
                                     <li className="nominations-card_img-king-activ">
-                                        <img src={streamerImages[myVotes?.SlayKing] || streamerImages["Kot_Cvetkov"]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.NayKing] || streamerImages["Kot_Cvetkov"]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.SlayKing &&
+                                    {!myVotes?.NayKing &&
                                     <li className="nominations-card_img-king">
                                         <img src={streamerImages["SlayKing"]} alt="avatar"/>
                                     </li>
@@ -87,7 +87,7 @@ const unlockAchievement = async (key) => {
                                         NAYKING
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.SlayKing || "—"}
+                                        {myVotes?.NayKing || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleKing(true);
@@ -100,12 +100,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card-king">
                                     <li className="nominations-card-half">
-                                    {myVotes?.SlayQuin &&
+                                    {myVotes?.NayQuin &&
                                     <li className="nominations-card_img-king-activ">
-                                        <img src={streamerImages[myVotes?.SlayQuin]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.NayQuin]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.SlayQuin &&
+                                    {!myVotes?.NayQuin &&
                                     <li className="nominations-card_img-king">
                                         <img src={streamerImages["SlayQuin"]} alt="avatar"/>
                                     </li>
@@ -116,7 +116,7 @@ const unlockAchievement = async (key) => {
                                         NAYQUEEN
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.SlayQuin || "—"}
+                                        {myVotes?.NayQuin || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleQuin(true);
@@ -160,12 +160,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Streamer &&
+                                    {myVotes?.Стример &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Streamer]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Стример]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Streamer &&
+                                    {!myVotes?.Стример &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Streamer"]} alt="avatar"/>
                                     </li>
@@ -176,7 +176,7 @@ const unlockAchievement = async (key) => {
                                         СТРИМЕР
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Streamer || "—"}
+                                        {myVotes?.Стример || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleStreamer(true)
@@ -189,12 +189,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Bloger &&
+                                    {myVotes?.Блогер &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Bloger]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Блогер]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Bloger &&
+                                    {!myVotes?.Блогер &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Bloger"]} alt="avatar"/>
                                     </li>
@@ -205,7 +205,7 @@ const unlockAchievement = async (key) => {
                                         БЛОГЕР
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Bloger || "—"}
+                                        {myVotes?.Блогер || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleBloger(true)
@@ -218,12 +218,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Moder &&
+                                    {myVotes?.Модератор &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Moder]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Модератор]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Moder &&
+                                    {!myVotes?.Модератор &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Moder"]} alt="avatar"/>
                                     </li>
@@ -234,7 +234,7 @@ const unlockAchievement = async (key) => {
                                         РЫЦАРЬ
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Moder || "—"}
+                                        {myVotes?.Модератор || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleModer(true)
@@ -276,12 +276,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Lor &&
+                                    {myVotes?.Лоровед &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Lor]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Лоровед]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Lor &&
+                                    {!myVotes?.Лоровед &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Lor"]} alt="avatar"/>
                                     </li>
@@ -292,7 +292,7 @@ const unlockAchievement = async (key) => {
                                         ЛОРОВЕД
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Lor || "—"}
+                                        {myVotes?.Лоровед || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleLor(true)
@@ -305,12 +305,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Transformation &&
+                                    {myVotes?.Преображение &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Transformation]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Преображение]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Transformation && (
+                                    {!myVotes?.Преображение && (
                                     <li className={`nominations-card_img ${transformationIndex === 19 ? "achievements" : ""}`}>
                                         <img 
                                         src={streamerImages.Transformation[transformationIndex]}
@@ -330,7 +330,7 @@ const unlockAchievement = async (key) => {
                                         ПРЕОБРАЖЕНИЕ
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Transformation || "—"}
+                                        {myVotes?.Преображение || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleTransformation(true)
@@ -343,12 +343,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Zavoz &&
+                                    {myVotes?.Завоз &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Zavoz]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Завоз]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Zavoz &&
+                                    {!myVotes?.Завоз &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Zavoz"]} alt="avatar"/>
                                     </li>
@@ -359,7 +359,7 @@ const unlockAchievement = async (key) => {
                                         ЗАВОЗЕР
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Zavoz || "—"}
+                                        {myVotes?.Завоз || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleZavoz(true)
@@ -372,12 +372,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Soul &&
+                                    {myVotes?.Душа &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Soul]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Душа]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Soul &&
+                                    {!myVotes?.Душа &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Soul"]} alt="avatar"/>
                                     </li>
@@ -388,7 +388,7 @@ const unlockAchievement = async (key) => {
                                         ДУША ЧАТА
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Soul || "—"}
+                                        {myVotes?.Душа || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleSoul(true)
@@ -401,12 +401,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Ship &&
+                                    {myVotes?.Шипп &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Ship]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Шипп]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Ship &&
+                                    {!myVotes?.Шипп &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Ship"]} alt="avatar"/>
                                     </li>
@@ -417,7 +417,7 @@ const unlockAchievement = async (key) => {
                                         ШИПП
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Ship || "—"}
+                                        {myVotes?.Шипп || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleShip(true)
@@ -432,12 +432,12 @@ const unlockAchievement = async (key) => {
                             <div className="nominations-king looser">
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Ragebait &&
+                                    {myVotes?.Рэйджбайт &&
                                     <li className="nominations-card_img-activ">
-                                    <img src={streamerImages[myVotes?.Ragebait]} alt="avatar"/>
+                                    <img src={streamerImages[myVotes?.Рэйджбайт]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Ragebait &&
+                                    {!myVotes?.Рэйджбайт &&
                                     <li className="nominations-card_img">
                                     <img src={streamerImages["Ragebait"]} alt="avatar"/>
                                     </li>
@@ -448,7 +448,7 @@ const unlockAchievement = async (key) => {
                                     РЕЙДЖБАЙТЕР
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Ragebait || "—"}
+                                        {myVotes?.Рэйджбайт || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleRagebait(true)
@@ -461,12 +461,12 @@ const unlockAchievement = async (key) => {
                                 </ul>
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
-                                    {myVotes?.Podliza &&
+                                    {myVotes?.Подлиза &&
                                     <li className="nominations-card_img-activ">
-                                        <img src={streamerImages[myVotes?.Podliza]} alt="avatar"/>
+                                        <img src={streamerImages[myVotes?.Подлиза]} alt="avatar"/>
                                     </li>
                                     }
-                                    {!myVotes?.Podliza &&
+                                    {!myVotes?.Подлиза &&
                                     <li className="nominations-card_img">
                                         <img src={streamerImages["Podliza"]} alt="avatar"/>
                                     </li>
@@ -477,7 +477,7 @@ const unlockAchievement = async (key) => {
                                         ПОДЛИЗА
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Podliza || "—"}
+                                        {myVotes?.Подлиза || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisiblePodliza(true)
