@@ -84,6 +84,15 @@ router.get("/stats", async (req, res) => {
 
         const users = await User.find({}, { password: 0 });
 
+        function countAchievements(user) {
+            if (!user.achievements) return 0;
+            let count = 0;
+            for (const [key, value] of user.achievements.entries()) {
+                if (value) count++;
+            }
+            return count;
+        }
+
         let output = "=== 📊 Статистика голосов ===\n";
         stats.forEach(cat => {
             output += `\nКатегория: ${cat.category || "Без категории"}\n`;
@@ -94,8 +103,9 @@ router.get("/stats", async (req, res) => {
 
         output += "\n=== 👥 Зарегистрированные пользователи ===\n";
         users.forEach(u => {
-            output += `- ${u.username}\n`;
-        });
+        const achievementsCount = countAchievements(u);
+        output += `- ${u.username} (Ачивки: ${achievementsCount})\n`;
+});
 
         console.log(output);
         res.type("text/plain").send(output);
