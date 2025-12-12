@@ -29,7 +29,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            body: JSON.stringify({ category: "Пипп" }),
+            body: JSON.stringify({ category: "Шипп" }),
         });
         const data = await res.json();
         console.log("Отмена голоса:", data);

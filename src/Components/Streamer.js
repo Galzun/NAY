@@ -60,7 +60,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                «NAY СТРИМЕР»
+                                «NAY STREAMER
                             </h2>
                             <p className="slayking__header-text">
                                 Это гении потоковых вещаний, которые весь год придумывали для вас интересный контент, который мог затянуть ваши взоры на их трансляции
