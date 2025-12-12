@@ -1,5 +1,6 @@
 import "./Style/Menu.css"
 import { ReactComponent as TelegramIcon } from "./Static/Icons/telegram-svgrepo-com.svg";
+import streamerImages from "./Static/streamerImages.js"
 
 
 export default function Menu({background, setBackground, achievements}) {
@@ -15,9 +16,7 @@ export default function Menu({background, setBackground, achievements}) {
 		<div className='menu-wrapper'>
 			<div className='container'>
 				<div className={`menu ${background ? "on" : ""}`}>
-					<ul className='menu-block'>
-
-					</ul>
+                        <img className="menu-icon" src={streamerImages["NayIcon"]}/>
                     <ul className='menu-block_social'>
                         <p className="menu-block_social-achievements">Ваши ачивки: {achievements}</p>
                         <div className={`tumbler ${background ? "on" : ""}`} onClick={visbackground}>

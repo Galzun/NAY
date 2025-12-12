@@ -55,6 +55,20 @@ export default function Transformation({
         confirmVote(selectedStreamer);
     };
 
+        const unlockAchievement = async (key) => {
+    const res = await fetch("https://galzun-nay-c390.twc1.net/user/achievement", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({ achievement: key }),
+    });
+    const data = await res.json();
+    console.log("Ачивка сохранена:", data);
+    };
+
+
     return (
         <div>
             {visibleTransformation &&
@@ -87,9 +101,10 @@ export default function Transformation({
                                 <img src={streamerImages.Transformation[transformationIndex]}
                                 onClick={() => {
                                 if (transformationIndex === 19 && !hasAchievement20) {
-                                    setAchievements(prev => prev + 1); // +1 к ачивкам
-                                    setHasAchievement20(true);         // отмечаем, что ачивка получена
-                                    }
+                                setAchievements(prev => prev + 1);
+                                setHasAchievement20(true);
+                                unlockAchievement("achievement20");
+                                }
                                 }}></img>
                             </div>
                         </div>

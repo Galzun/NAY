@@ -5,7 +5,7 @@ import cors from "cors";
 import connectDB from "./db.js";
 import voteRoutes from "./routes/vote.js";
 import authRoutes from "./routes/auth.js";
-
+import userRoutes from "./routes/user.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,6 +22,7 @@ await connectDB();
 
 app.use("/vote", voteRoutes);
 app.use("/auth", authRoutes);
+app.use("/user", userRoutes);
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`🚀 Сервер запущен на порту ${PORT}`);

@@ -144,19 +144,4 @@ router.post("/cancel", auth, async (req, res) => {
     }
 });
 
-    router.post("/achievement20", async (req, res) => {
-    const { userId } = req.body;
-    try {
-        const user = await User.findById(userId);
-        if (!user.hasAchievement20) {
-        user.hasAchievement20 = true;
-        await user.save();
-        }
-        res.json({ hasAchievement20: user.hasAchievement20 });
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
-    });
-
-
 export default router;

@@ -58,7 +58,7 @@ export default function Discord({visibleDiscord, setvisibleDiscord, onVote, setv
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                «DISCORD»
+                                «NAY DISCORD»
                             </h2>
                             <p className="slayking__header-text">
                                 Самые активные из комьюнити, которым мало только писать буковки и кидать голосовые в чатике, эти ребята готовы показать всё на что они способны

@@ -58,7 +58,7 @@ export default function Bloger({visibleBloger, setvisibleBloger, onVote, setvisi
                         </div>
                         <div className="slayking__header">
                             <h2 className="slayking__header-title">
-                                «БЛОГЕР»
+                                NAY BLOGGER
                             </h2>
                             <p className="slayking__header-text">
                                 Эти люди не стесняются своей жизни или внешности, они готовы вам всё показать в кружках на телефоне или на вэбках компьютеров. Мы знаем как они едят, пьют, взрывают унитазы, и какое сегодня у них выражение лица

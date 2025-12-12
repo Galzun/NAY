@@ -49,6 +49,20 @@ export default function Nominations({setvisibleKing,
     console.log("Achievements updated:", achievements);
     }, [achievements]);
 
+const unlockAchievement = async (key) => {
+    const res = await fetch("https://galzun-nay-c390.twc1.net/user/achievement", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({ achievement: key }),
+    });
+    const data = await res.json();
+    console.log("Ачивка сохранена:", data);
+};
+
+
 
     return (
                 <div className='nominations-wrapper'>
@@ -304,6 +318,7 @@ export default function Nominations({setvisibleKing,
                                             if (transformationIndex === 19 && !hasAchievement20) {
                                             setAchievements(prev => prev + 1); // +1 к ачивкам
                                             setHasAchievement20(true);         // отмечаем, что ачивка получена
+                                            unlockAchievement("achievement20");
                                             }
                                         }}
                                         alt="avatar" />

@@ -24,6 +24,8 @@ import streamerImages from "../src/Components/Static/streamerImages.js"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
+import axios from "axios";
+
 export default function App({background, setBackground}) {
 
 	const [visibleKing, setvisibleKing] = useState(false);
@@ -122,6 +124,31 @@ export default function App({background, setBackground}) {
 	const [achievements, setAchievements] = useState(0)
 	const [transformationIndex, setTransformationIndex] = useState(0);
 	const [hasAchievement20, setHasAchievement20] = useState(false);
+
+const fetchAchievements = async () => {
+    const res = await fetch("https://galzun-nay-c390.twc1.net/user/achievements", {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    const data = await res.json();
+    console.log("Ачивки:", data);
+
+    if (data.achievements) {
+        const unlocked = Object.keys(data.achievements).filter(k => data.achievements[k]);
+        setAchievements(unlocked.length);
+        if (data.achievements["achievement20"]) {
+            setHasAchievement20(true);
+        }
+    }
+};
+
+useEffect(() => {
+    if (localStorage.getItem("token")) {
+        fetchAchievements();
+    }
+}, []);
+
 
 
 	return (
