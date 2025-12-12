@@ -89,7 +89,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    onClick={() => setSelectedStreamer("Gargamel_mod")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("VaOne")}>
+                                    onClick={() => setSelectedStreamer("VaOne_mod")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("lxtdxwn")}>
+                                    onClick={() => setSelectedStreamer("Lx_mod")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -128,7 +128,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Тревор Шарп")}>
+                                    onClick={() => setSelectedStreamer("Тревор Шарп_mod")}>
                                     Выбрать
                                 </div>
                             </div>

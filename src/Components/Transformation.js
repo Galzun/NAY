@@ -118,7 +118,7 @@ export default function Transformation({
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Ankera")}>
+                                    onClick={() => setSelectedStreamer("Ankera_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -131,7 +131,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Максимилиан")}>
+                                    onClick={() => setSelectedStreamer("Максимилиан_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Laku_Fi")}>
+                                    onClick={() => setSelectedStreamer("Laku_Fi_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -157,7 +157,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Япоша")}>
+                                    onClick={() => setSelectedStreamer("Япоша_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -170,7 +170,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Котятко")}>
+                                    onClick={() => setSelectedStreamer("Котятко_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -183,7 +183,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Лиза")}>
+                                    onClick={() => setSelectedStreamer("Лиза_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -196,7 +196,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("VaOne")}>
+                                    onClick={() => setSelectedStreamer("VaOne_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -209,7 +209,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Begro")}>
+                                    onClick={() => setSelectedStreamer("Begro_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -222,7 +222,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Prozhitka")}>
+                                    onClick={() => setSelectedStreamer("Prozhitka_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -235,7 +235,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("ProstoKvasha")}>
+                                    onClick={() => setSelectedStreamer("ProstoKvasha_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -248,7 +248,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Джесcи")}>
+                                    onClick={() => setSelectedStreamer("Джесcи_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -261,7 +261,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("David")}>
+                                    onClick={() => setSelectedStreamer("David_tf")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -274,7 +274,7 @@ export default function Transformation({
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    onClick={() => setSelectedStreamer("Gargamel_tf")}>
                                     Выбрать
                                 </div>
                             </div>

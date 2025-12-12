@@ -93,7 +93,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Tofro")}>
+                                    onClick={() => setSelectedStreamer("Tofro_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Begro")}>
+                                    onClick={() => setSelectedStreamer("Begro_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -123,7 +123,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Япоша")}>
+                                    onClick={() => setSelectedStreamer("Япоша_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -138,7 +138,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Laku_Fi")}>
+                                    onClick={() => setSelectedStreamer("Laku_Fi_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Ankera")}>
+                                    onClick={() => setSelectedStreamer("Ankera_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -168,7 +168,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("DearShiroSan")}>
+                                    onClick={() => setSelectedStreamer("DearShiroSan_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -183,7 +183,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    onClick={() => setSelectedStreamer("Gargamel_st")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ export default function Streamer({visibleStreamer, setvisibleStreamer, onVote, s
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Ramzes")}>
+                                    onClick={() => setSelectedStreamer("Ramzes_st")}>
                                     Выбрать
                                 </div>
                             </div>
