@@ -89,7 +89,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                                 </h3>
                                 <div
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("ProstoKvasha&Poser_sh")}>
+                                    onClick={() => setSelectedStreamer("ProstoKvashaPoser_sh")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("MishaDesinov&Laku_Fi_sh")}>
+                                    onClick={() => setSelectedStreamer("MishaDesinovLaku_Fi_sh")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Ast&Ланя_sh")}>
+                                    onClick={() => setSelectedStreamer("AstЛаня_sh")}>
                                     Выбрать
                                 </div>
                             </div>
@@ -128,7 +128,7 @@ export default function Ship({visibleShip, setvisibleShip, onVote, setvisibleTel
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Лиза&Кот_sh")}>
+                                    onClick={() => setSelectedStreamer("ЛизаКот_sh")}>
                                     Выбрать
                                 </div>
                             </div>

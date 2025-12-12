@@ -192,7 +192,7 @@ useEffect(() => {
 				hasAchievement20={hasAchievement20} setHasAchievement20={setHasAchievement20}
 
 				myVotes={myVotes} setMyVotes={setMyVotes}/>
-				<Regi onLogin={fetchMyVotes}/>
+				{/* <Regi onLogin={fetchMyVotes}/> */}
 				{visibleTelegram && <Telegram onLogin={fetchMyVotes} setvisibleTelegram={setvisibleTelegram} />}
 				<Footer/>
 			</div>
