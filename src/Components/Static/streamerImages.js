@@ -1,7 +1,6 @@
 // streamerImages.js
 
 import NayIcon from "./Icons/nay-icon.gif"
-import NayIcon2 from "./Icons/nay-icon2.png"
 
 import SlayQuin from "./nominations/SlayQuin.png"
 import SlayKing from "./nominations/SlayKing.png"
@@ -131,7 +130,6 @@ import Background from "./Background/Background.jpg"
 
 const streamerImages = {
     "NayIcon": NayIcon,
-    "NayIcon2": NayIcon2,
 
     "SlayQuin": SlayQuin,
     "SlayKing": SlayKing,
