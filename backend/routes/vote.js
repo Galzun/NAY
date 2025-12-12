@@ -87,11 +87,13 @@ router.get("/stats", async (req, res) => {
         function countAchievements(user) {
             if (!user.achievements) return 0;
             let count = 0;
-            for (const [key, value] of user.achievements.entries()) {
-                if (value) count++;
+            // user.achievements хранится как обычный объект
+            for (const key in user.achievements) {
+                if (user.achievements[key]) count++;
             }
             return count;
         }
+
 
         let output = "=== 📊 Статистика голосов ===\n";
         stats.forEach(cat => {
