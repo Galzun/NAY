@@ -219,7 +219,7 @@ const unlockAchievement = async (key) => {
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
                                     {myVotes?.Модератор &&
-                                    <li className="nominations-card_img-activ">
+                                    <li className="nominations-card_img-activ nobd">
                                         <img src={streamerImages[myVotes?.Модератор]} alt="avatar"/>
                                     </li>
                                     }
@@ -306,7 +306,7 @@ const unlockAchievement = async (key) => {
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
                                     {myVotes?.Преображение &&
-                                    <li className="nominations-card_img-activ">
+                                    <li className="nominations-card_img-activ nobd">
                                         <img src={streamerImages[myVotes?.Преображение]} alt="avatar"/>
                                     </li>
                                     }
@@ -402,7 +402,7 @@ const unlockAchievement = async (key) => {
                                 <ul className="nominations-card">
                                     <li className="nominations-card-half">
                                     {myVotes?.Шипп &&
-                                    <li className="nominations-card_img-activ">
+                                    <li className="nominations-card_img-activ sh">
                                         <img src={streamerImages[myVotes?.Шипп]} alt="avatar"/>
                                     </li>
                                     }

@@ -156,3 +156,8 @@
 .achievements {
     cursor: pointer;
 }
+
+.nobd {
+    border-radius: 0px;
+    overflow: visible;
+}
