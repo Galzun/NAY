@@ -193,10 +193,6 @@
     background-color: #808080;
 }
 
-.slayking__body-card__button:active {
-    background-color: #808080;
-}
-
 @media (max-width: 864px) {
 .slayking__header-text {
     margin: 0px;
