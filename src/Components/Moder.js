@@ -128,7 +128,7 @@ export default function Moder({visibleModer, setvisibleModer, onVote, setvisible
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Тревор Шарп_mod")}>
+                                    onClick={() => setSelectedStreamer("Тревор_mod")}>
                                     Выбрать
                                 </div>
                             </div>
