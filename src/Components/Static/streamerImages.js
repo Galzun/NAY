@@ -38,7 +38,6 @@ import Transformation_19 from "./nominations/Transformation/Transformation_19.pn
 import Transformation_20 from "./nominations/Transformation/Transformation_20.png"
 
 //Transformation
-import Ermol from "./Transformation/ermol.png"
 import Ankera_tf from "./Transformation/Ankera_tf.png"
 import Максимилиан_tf from "./Transformation/Максимилиан_tf.png"
 import Laku_Fi_tf from "./Transformation/Laku_Fi_tf.png"
@@ -50,7 +49,7 @@ import Begro_tf from "./Transformation/Begro_tf.png"
 import Prozhitka_tf from "./Transformation/Prozhitka_tf.png"
 import ProstoKvasha_tf from "./Transformation/Dups_tf.png"
 import Джесcи_tf from "./Transformation/Джесcи_tf.png"
-import Ermol_tf from "./Transformation/Ermol_tf.png"
+import Ermol_tf from "./Transformation/ermol_tf.png"
 import David_tf from "./Transformation/David_tf.png"
 import Gargamel_tf from "./Transformation/Gargamel_tf.png"
 
@@ -135,7 +134,6 @@ import Background from "./Background/Background.jpg"
 
 const streamerImages = {
     "NayIcon": NayIcon,
-
     "SlayQuin": SlayQuin,
     "SlayKing": SlayKing,
     "Ragebait": Ragebait,
