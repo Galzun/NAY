@@ -61,7 +61,7 @@ export default function Zavoz({visibleZavoz, setvisibleZavoz, onVote, setvisible
                                 «ЗАВОЗЕР»
                             </h2>
                             <p className="slayking__header-text">
-                                Самые активные из комьюнити, которым мало только писать буковки и кидать голосовые в чатике, эти ребята готовы показать всё на что они способны
+                                Этих людей знает каждый, их всегда выделяют, слушая о них мы смеёмся и удивляемся, а они не перестают завозить нам контентика))WW прикольчики А^А^А^А^А^АХАХАХЕХЕХЕ 0111100010 LMAOXDDDD
                             </p>
                             <div className="slayking__body-card__buttons">
                                 <div
@@ -225,7 +225,7 @@ export default function Zavoz({visibleZavoz, setvisibleZavoz, onVote, setvisible
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages[""]}></img>
+                                    <img src={streamerImages["илья"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     Илюха

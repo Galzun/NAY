@@ -552,7 +552,7 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, setvisibl
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages[""]}></img>
+                                    <img src={streamerImages["илья"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
                                     Илюха
