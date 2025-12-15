@@ -186,6 +186,32 @@ export default function Zavoz({visibleZavoz, setvisibleZavoz, onVote, setvisible
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
+                                    <img src={streamerImages["lxtdxwn"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    lxtdxwn
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("lxtdxwn")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Gargamel"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Gargamel
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
                                     <img src={streamerImages["ProstoKvasha"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
@@ -212,27 +238,14 @@ export default function Zavoz({visibleZavoz, setvisibleZavoz, onVote, setvisible
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
-                                    <img src={streamerImages["lxtdxwn"]}></img>
+                                    <img src={streamerImages["АртёмкаКрутой"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
-                                    lxtdxwn
+                                    Артёмка Крутой
                                 </h3>
                                 <div 
                                     className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("lxtdxwn")}>
-                                    Выбрать
-                                </div>
-                            </div>
-                            <div className="slayking__body-card">
-                                <div className="slayking__body-card__img">
-                                    <img src={streamerImages["Gargamel"]}></img>
-                                </div>
-                                <h3 className="slayking__body-card__name">
-                                    Gargamel
-                                </h3>
-                                <div 
-                                    className="slayking__body-card__button"
-                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    onClick={() => setSelectedStreamer("АртёмкаКрутой")}>
                                     Выбрать
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 import "./Style/Nominations.css"
 import streamerImages from "./Static/streamerImages"
+import moderDisplayNames from "./Static/moderDisplayNames.js";
 import { useState, useEffect } from "react";
 
 export default function Nominations({setvisibleKing, 
@@ -234,7 +235,7 @@ const unlockAchievement = async (key) => {
                                         РЫЦАРЬ
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Модератор || "—"}
+                                        {moderDisplayNames[myVotes?.Модератор] || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleModer(true)

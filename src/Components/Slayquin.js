@@ -224,6 +224,19 @@ export default function Slayquin({visibleQuin, setvisibleQuin, onVote, setvisibl
                                     Выбрать
                                 </div>
                             </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Лупа"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    🔍
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Лупа")}>
+                                    Выбрать
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

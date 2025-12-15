@@ -199,6 +199,32 @@ export default function Soul({visibleSoul, setvisibleSoul, onVote, setvisibleTel
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
+                                    <img src={streamerImages["ТреворШарп"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Тревор Шарп
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("ТреворШарп")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Котлетка"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Котлетка
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Котлетка")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
                                     <img src={streamerImages["япоша"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">

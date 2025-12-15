@@ -75,6 +75,8 @@ import DearShiroSan_st from "./Streamer/DearShiroSan.png"
 import Gargamel_st from "./Streamer/Gargamel.png"
 import Ramzes_st from "./Streamer/Ramzes.png"
 
+import Лупа from "./avatar/Лупа.jpg"
+import Котлетка from "./avatar/Котлетка.png"
 import сглыпа from "./avatar/сглыпа.jpg"
 import Kerryass from "./avatar/Kerryass.jpg"
 import fivsov from "./avatar/fivsov.jpg"
@@ -227,6 +229,8 @@ const streamerImages = {
     "Gargamel_st": Gargamel_st,
     "Ramzes_st": Ramzes_st,
 
+    "Лупа": Лупа,
+    "Котлетка": Котлетка,
     "сглыпа": сглыпа,
     "Kerryass": Kerryass,
     "fivsov": fivsov,
