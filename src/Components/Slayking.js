@@ -227,6 +227,19 @@ export default function Slayking({visibleKing, setvisibleKing, onVote, setvisibl
                             </div>
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img">
+                                    <img src={streamerImages["marcelina"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    marcelina
+                                </h3>
+                                <div 
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("marcelina")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
                                     <img src={streamerImages["сухофрукт"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">
