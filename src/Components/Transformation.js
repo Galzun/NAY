@@ -111,6 +111,19 @@ export default function Transformation({
                         <div className="slayking__body">
                             <div className="slayking__body-card">
                                 <div className="slayking__body-card__img transformation-img">
+                                    <img src={streamerImages["Ermol_tf"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Ermol
+                                </h3>
+                                <div
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Ermol_tf")}>
+                                    Выбрать
+                                </div>
+                            </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img transformation-img">
                                     <img src={streamerImages["Ankera_tf"]}></img>
                                 </div>
                                 <h3 className="slayking__body-card__name">

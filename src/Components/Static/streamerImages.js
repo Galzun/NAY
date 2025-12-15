@@ -38,6 +38,7 @@ import Transformation_19 from "./nominations/Transformation/Transformation_19.pn
 import Transformation_20 from "./nominations/Transformation/Transformation_20.png"
 
 //Transformation
+import Ermol from "./Transformation/ermol.png"
 import Ankera_tf from "./Transformation/Ankera_tf.png"
 import Максимилиан_tf from "./Transformation/Максимилиан_tf.png"
 import Laku_Fi_tf from "./Transformation/Laku_Fi_tf.png"
