@@ -102,3 +102,12 @@
     border-radius: 25px;
     background-color: #1a6919c0;
 }
+
+@media (max-width: 1044px) {
+.menu-icon {
+    display: none;
+}
+.menu-block_social-achievements {
+    font-size: 14px;
+}
+}

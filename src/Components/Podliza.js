@@ -171,6 +171,19 @@ export default function Podliza({visiblePodliza, setvisiblePodliza, onVote, setv
                                     Выбрать
                                 </div>
                             </div>
+                            <div className="slayking__body-card">
+                                <div className="slayking__body-card__img">
+                                    <img src={streamerImages["Gargamel"]}></img>
+                                </div>
+                                <h3 className="slayking__body-card__name">
+                                    Gargamel
+                                </h3>
+                                <div
+                                    className="slayking__body-card__button"
+                                    onClick={() => setSelectedStreamer("Gargamel")}>
+                                    Выбрать
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

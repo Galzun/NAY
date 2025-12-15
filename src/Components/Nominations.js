@@ -3,6 +3,9 @@
 import "./Style/Nominations.css"
 import streamerImages from "./Static/streamerImages"
 import moderDisplayNames from "./Static/moderDisplayNames.js";
+import transDisplayNames from "./Static/transDisplayNames.js";
+import shipDisplayNames from "./Static/shipDisplayNames.js";
+import streamerDisplayNames from "./Static/streamerDisplayNames.js";
 import { useState, useEffect } from "react";
 
 export default function Nominations({setvisibleKing, 
@@ -177,7 +180,7 @@ const unlockAchievement = async (key) => {
                                         СТРИМЕР
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Стример || "—"}
+                                        {streamerDisplayNames[myVotes?.Стример] || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleStreamer(true)
@@ -331,7 +334,7 @@ const unlockAchievement = async (key) => {
                                         ПРЕОБРАЖЕНИЕ
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Преображение || "—"}
+                                        {transDisplayNames[myVotes?.Преображение] || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleTransformation(true)
@@ -418,7 +421,7 @@ const unlockAchievement = async (key) => {
                                         ШИПП
                                     </li>
                                     <li className="nominations-card_name">
-                                        {myVotes?.Шипп || "—"}
+                                        {shipDisplayNames[myVotes?.Шипп] || "—"}
                                     </li>
                                     <li onClick={() => {
                                         setvisibleShip(true)

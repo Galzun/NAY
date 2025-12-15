@@ -161,3 +161,9 @@
     border-radius: 0px;
     overflow: visible;
 }
+
+@media (max-width: 520px) {
+.nominations-card_nomination {
+    font-size: 38px;
+}
+}

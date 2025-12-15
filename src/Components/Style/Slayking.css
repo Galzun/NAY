@@ -91,6 +91,7 @@
 }
 .slayking__header-text {
     max-width: 1300px;
+    margin: 0px 300px 0px 0px;
     height: 120px;
     font-size: 28px;
     color: #808080;
@@ -177,7 +178,7 @@
 
 .slayking__body-card__button {
     display: block;
-    max-width: 260px;
+    width: 260px;
     margin: 0 auto;
     padding: 10px 0;
     font-size: 26px;
@@ -194,4 +195,46 @@
 
 .slayking__body-card__button:active {
     background-color: #808080;
+}
+
+@media (max-width: 864px) {
+.slayking__header-text {
+    margin: 0px;
+}
+
+.slayking__header-img {
+    display: none;
+}
+
+.slayking__header-title {
+    font-size: 36px;
+}
+}
+
+@media (max-width: 520px) {
+.slayking__body-card__button {
+    width: 150px;
+    font-size: 18px;
+}
+.slayking__body-card {
+    padding: 0px 30px;
+    max-width: 400px;
+    align-items: center;
+    margin: 0px auto 60px auto;
+}
+.slayking__body-card__img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.slayking__body-card__name {
+    padding: 20px 0px 10px 0px;
+    font-size: 22px;
+    color: #808080;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+    position: relative;
+}
 }
