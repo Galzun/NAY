@@ -42,7 +42,7 @@ function Auth({onLogin}) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={register}>Регистрация</button>
+        {/* <button onClick={register}>Регистрация</button> */}
         <button onClick={login}>Вход</button>
         </div>
     );
